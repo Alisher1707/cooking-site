@@ -1,0 +1,329 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Osh",
+      "image": "/img/osh.png",
+      "category": "Asosiy taomlar",
+      "shortDescription": "An'anaviy o'zbek milliy taomi",
+      "description": "An'anaviy o'zbek oshi - eng mashhur milliy taomimiz. Guruch, go'sht va sabzavotlardan tayyorlanadi.",
+      "cookTime": "2 soat",
+      "prepTime": "30 daqiqa",
+      "servings": 6,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g guruch",
+        "500g qo'y go'shti",
+        "300g sabzi",
+        "200g piyoz",
+        "100ml o'simlik yog'i",
+        "1 choy qoshiq zira",
+        "1 choy qoshiq barberys",
+        "Tuz va ziravorlar ta'miga qarab"
+      ],
+      "instructions": [
+        "Go'shtni kichik bo'laklarga bo'ling",
+        "Qozonga yog' quyib, go'shtni qovuring",
+        "Piyoz va sabzini qo'shib, yangisidan qovuring",
+        "Guruchni yuvib, qozonga soling",
+        "Suv quyib, ziravorlarni qo'shing",
+        "Olov kuchini kamaytiring va 1.5 soat davomida pishiring",
+        "Tayyor bo'lgach, 10 daqiqa tindirib bering"
+      ],
+      "tips": [
+        "Guruchni oldindan 30 daqiqa suvda ivitib qo'ying",
+        "Go'shtni yaxshi qovurib oling",
+        "Suv miqdoriga e'tibor bering - guruch ustidan 2 barmoq baland bo'lishi kerak"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Manti",
+      "image": "/img/manti.jpg",
+      "category": "Asosiy taomlar",
+      "shortDescription": "Go'shtli manti - juda mazali va to'yimli",
+      "description": "Go'shtli manti - nozik xamirga o'ralgan go'sht bilan, bug'da pishiriladigan milliy taom.",
+      "cookTime": "1.5 soat",
+      "prepTime": "1 soat",
+      "servings": 4,
+      "difficulty": "Qiyin",
+      "ingredients": [
+        "500g xamir uchun un",
+        "300g qo'y go'shti",
+        "200g piyoz",
+        "1 tuxum",
+        "250ml suv",
+        "1 osh qoshiq tuz",
+        "1 choy qoshiq qora murch"
+      ],
+      "instructions": [
+        "Undan xamir qorib, 30 daqiqa tindiring",
+        "Go'sht va piyozni maydalang",
+        "Xamirni yupqa yoyib, to'rtburchaklar qilib kesing",
+        "Har biriga go'sht qo'shib, o'rang",
+        "Bug'da 40-45 daqiqa pishiring",
+        "Issiq holda dasturxonga torting"
+      ],
+      "tips": [
+        "Xamirni juda yupqa qilmang, yirtilishi mumkin",
+        "Go'shtga biroz yog' qo'shing",
+        "Mantiqasonda suv qaynab turganda qo'ying"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Lag'mon",
+      "image": "/img/lagmon.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Issiq va lazzatli sho'rva",
+      "description": "O'zbek lag'moni - qo'lda tortilgan makarona, go'sht va sabzavotlar bilan tayyorlanadigan sho'rva.",
+      "cookTime": "1 soat",
+      "prepTime": "45 daqiqa",
+      "servings": 4,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "400g lag'mon makaronasi",
+        "300g go'sht",
+        "200g pomidor",
+        "150g sabzi",
+        "100g piyoz",
+        "50g sarimsoq",
+        "Ziravorlar va ko'katlar"
+      ],
+      "instructions": [
+        "Go'shtni bo'laklarga bo'lib qovuring",
+        "Sabzavotlarni qo'shib dimlab pishiring",
+        "Suv quyib, sho'rva tayyorlang",
+        "Lag'monni alohida qaynatib pishiring",
+        "Lag'monni kosalarga solib, ustiga sho'rva quying",
+        "Ko'katlar bilan bezatib bering"
+      ],
+      "tips": [
+        "Lag'monni haddan tashqari pishirmang",
+        "Sho'rvani qalin qiling",
+        "Issiq holda xizmat qiling"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Somsa",
+      "image": "/img/somsa.jpg",
+      "category": "Pishiriqlar",
+      "shortDescription": "Tandirda pishirilgan nozik xamirli",
+      "description": "Tandirda pishirilgan somsa - ichida go'sht va piyoz bilan, tashqarisi qizil va xushbo'y.",
+      "cookTime": "45 daqiqa",
+      "prepTime": "1 soat",
+      "servings": 8,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g un",
+        "400g qo'y go'shti",
+        "300g piyoz",
+        "200ml suv",
+        "100ml yog'",
+        "1 osh qoshiq tuz",
+        "1 tuxum (surtish uchun)"
+      ],
+      "instructions": [
+        "Undan xamir qorib, 1 soat tindiring",
+        "Go'sht va piyozni kubik shaklda to'g'rang",
+        "Xamirni bo'laklarga bo'lib, yoyib oling",
+        "Ichiga go'sht qo'shib, uchburchak shaklida yoping",
+        "Ustini tuxum bilan surting",
+        "Tandirda yoki pechda 30-35 daqiqa pishiring"
+      ],
+      "tips": [
+        "Xamir yumshoq bo'lishi kerak",
+        "Go'shtni juda mayda to'g'ramang",
+        "Pishirishdan oldin 10 daqiqa tindirib qo'ying"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Kabob",
+      "image": "/img/kabob.jpg",
+      "category": "Grill",
+      "shortDescription": "Mangalda pishirilgan go'sht",
+      "description": "Mangalda pishirilgan kabob - maxsus ziravorlar bilan marinadlangan, olovda pishiriladigan lazzatli taom.",
+      "cookTime": "30 daqiqa",
+      "prepTime": "2 soat",
+      "servings": 4,
+      "difficulty": "Oson",
+      "ingredients": [
+        "1kg qo'y go'shti",
+        "2 dona piyoz",
+        "3 osh qoshiq sirka",
+        "2 osh qoshiq yog'",
+        "1 choy qoshiq qora murch",
+        "1 choy qoshiq zira",
+        "Tuz ta'miga qarab"
+      ],
+      "instructions": [
+        "Go'shtni katta bo'laklarga kesing",
+        "Piyozni halqa qilib to'g'rang",
+        "Go'sht va piyozni aralashtiring",
+        "Ziravorlar va sirka qo'shib, 2 soat marinadlang",
+        "Shampurlarga tizing",
+        "Mangalda har tomondan 15 daqiqadan pishiring"
+      ],
+      "tips": [
+        "Go'shtni oldindan muzlatgichdan chiqarib qo'ying",
+        "Olovni o'rtacha qiling",
+        "Pishirayotganda tez-tez aylantiring"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sho'rva",
+      "image": "/img/shorva.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Go'sht va sabzavotli issiq taom",
+      "description": "Go'sht va sabzavotli sho'rva - qish kunlari uchun juda mos, issiq va to'yimli milliy sho'rva.",
+      "cookTime": "1.5 soat",
+      "prepTime": "30 daqiqa",
+      "servings": 6,
+      "difficulty": "Oson",
+      "ingredients": [
+        "500g go'sht",
+        "300g kartoshka",
+        "200g sabzi",
+        "150g piyoz",
+        "100g pomidor",
+        "Ko'katlar va ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni suvda 1 soat qaynatib pishiring",
+        "Sabzavotlarni to'g'rab qo'shing",
+        "Kartoshkani oxirda qo'shing",
+        "Ziravorlar va ko'katlar bilan ta'mlang",
+        "30 daqiqa qaynatib pishiring",
+        "Issiq holda dasturxonga torting"
+      ],
+      "tips": [
+        "Go'shtni yaxshi yuving",
+        "Ko'pikni muntazam olib turing",
+        "Kartoshkani juda kichik qilmang"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Beshbarmaq",
+      "image": "/img/beshbarmoq.jpg",
+      "category": "Asosiy taomlar",
+      "shortDescription": "Qozoq milliy taomi",
+      "description": "Beshbarmaq - keng makarona va go'sht bilan tayyorlanadigan to'yimli va mazali taom.",
+      "cookTime": "2 soat",
+      "prepTime": "45 daqiqa",
+      "servings": 8,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g qo'y go'shti",
+        "400g xamir uchun un",
+        "200g piyoz",
+        "Ziravorlar va ko'katlar"
+      ],
+      "instructions": [
+        "Go'shtni qaynatib pishiring",
+        "Xamir qorib, yupqa yoying va kesing",
+        "Makaronani go'sht sho'rvasida pishiring",
+        "Piyozni qovurib qo'shing",
+        "Hammasi birga aralashtirib tayyorlang"
+      ],
+      "tips": [
+        "Xamirni juda qalin qilmang",
+        "Go'sht sho'rvasi boy bo'lishi kerak"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Mastava",
+      "image": "/img/mastava.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Guruchli sho'rva",
+      "description": "Mastava - guruch, go'sht va sabzavotlar bilan tayyorlanadigan suyuq va to'yimli milliy sho'rva.",
+      "cookTime": "1 soat",
+      "prepTime": "30 daqiqa",
+      "servings": 5,
+      "difficulty": "Oson",
+      "ingredients": [
+        "200g guruch",
+        "300g go'sht",
+        "150g sabzi",
+        "100g piyoz",
+        "Ko'katlar va ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni qaynatib sho'rva tayyorlang",
+        "Sabzavotlarni qo'shib pishiring",
+        "Guruchni qo'shib qaynating",
+        "Ko'katlar bilan bezatib bering"
+      ],
+      "tips": [
+        "Guruchni oldindan yuving",
+        "Sho'rvani suyuq qiling"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Chuchvara",
+      "image": "/img/manti.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Kichik mantiga o'xshash taom",
+      "description": "Chuchvara - mayda xamir bo'laklariga o'ralgan go'sht, sho'rvada pishiriladigan taom.",
+      "cookTime": "1.5 soat",
+      "prepTime": "1 soat",
+      "servings": 4,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "300g xamir uchun un",
+        "200g go'sht",
+        "100g piyoz",
+        "Ko'katlar"
+      ],
+      "instructions": [
+        "Xamir qorib, mayda kesing",
+        "Go'sht qo'shib o'rang",
+        "Sho'rvada pishiring",
+        "Ko'katlar bilan bezating"
+      ],
+      "tips": [
+        "Chuchvaralarni kichik qiling",
+        "Sho'rvani ta'mli qiling"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Qozon kabob",
+      "image": "/img/qozonkabob.jpg",
+      "category": "Asosiy taomlar",
+      "shortDescription": "Qozonda pishirilgan go'sht",
+      "description": "Qozon kabob - sabzavotlar bilan birga dimlab pishirilgan go'sht, juda mazali va xushbo'y taom.",
+      "cookTime": "2 soat",
+      "prepTime": "30 daqiqa",
+      "servings": 6,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "1kg go'sht",
+        "300g piyoz",
+        "200g sabzi",
+        "Ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni qovuring",
+        "Sabzavotlarni qo'shib dimlab pishiring",
+        "2 soat davomida pishiring"
+      ],
+      "tips": [
+        "Olovni sekin qiling",
+        "Dimlab pishiring"
+      ]
+    }
+  ],
+  "categories": [
+    "Barchasi",
+    "Asosiy taomlar",
+    "Sho'rvalar",
+    "Pishiriqlar",
+    "Grill"
+  ]
+}
