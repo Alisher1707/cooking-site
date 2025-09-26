@@ -6,6 +6,7 @@ function Favorites({ onSelectRecipe }) {
   const { favorites, removeFavorite } = useAppContext()
   const { getFavoriteRecipes } = useRecipeContext()
   const [sortBy, setSortBy] = useState('name')
+  const [showClearModal, setShowClearModal] = useState(false)
 
   const favoriteRecipes = getFavoriteRecipes(favorites)
 
@@ -34,9 +35,16 @@ function Favorites({ onSelectRecipe }) {
   }, [favoriteRecipes, sortBy])
 
   const clearAllFavorites = () => {
-    if (window.confirm('Barcha sevimli retseptlarni o\'chirmoqchimisiz?')) {
-      favorites.forEach(id => removeFavorite(id))
-    }
+    setShowClearModal(true)
+  }
+
+  const confirmClearAll = () => {
+    favorites.forEach(id => removeFavorite(id))
+    setShowClearModal(false)
+  }
+
+  const cancelClear = () => {
+    setShowClearModal(false)
   }
 
   if (favoriteRecipes.length === 0) {
@@ -162,6 +170,37 @@ function Favorites({ onSelectRecipe }) {
           Har bir retseptni alohida ko'rib chiqing va oziq-ovqat ro'yxatingizni tuzing!
         </p>
       </div>
+
+      {/* Clear All Modal */}
+      {showClearModal && (
+        <div className="modal-overlay">
+          <div className="modal-container">
+            <div className="modal-header">
+              <h2>⚠️ Tasdiqlash</h2>
+            </div>
+            <div className="modal-body">
+              <p>Barcha sevimli retseptlarni o'chirmoqchimisiz?</p>
+              <p className="modal-warning">
+                Bu amal qaytarib bo'lmaydi. {favoriteRecipes.length} ta sevimli retsept o'chiriladi.
+              </p>
+            </div>
+            <div className="modal-actions">
+              <button
+                onClick={cancelClear}
+                className="modal-cancel-btn"
+              >
+                Bekor qilish
+              </button>
+              <button
+                onClick={confirmClearAll}
+                className="modal-confirm-btn"
+              >
+                Ha, o'chirish
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
