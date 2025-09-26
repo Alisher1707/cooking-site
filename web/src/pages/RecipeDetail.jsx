@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import recipesData from '../data/recipes.json'
-import FavoritesService from '../services/favoritesService'
+import React, { useState } from 'react'
+import { useAppContext } from '../contexts/AppContext'
+import { useRecipeContext } from '../contexts/RecipeContext'
+import '../styles/recipe-detail.css'
 
 function RecipeDetail({ recipeId, onBack }) {
   const [activeTab, setActiveTab] = useState('ingredients')
-  const [isFavorite, setIsFavorite] = useState(false)
+  const { favorites, toggleFavorite } = useAppContext()
+  const { getRecipeById } = useRecipeContext()
 
-  const recipe = recipesData.recipes.find(r => r.id === recipeId)
-
-  useEffect(() => {
-    // Sahifa yuklanganda sevimli ekanligini tekshirish
-    setIsFavorite(FavoritesService.isFavorite(recipeId))
-  }, [recipeId])
+  const recipe = getRecipeById(recipeId)
+  const isFavorite = favorites.includes(recipeId)
 
   if (!recipe) {
     return (
@@ -27,16 +25,8 @@ function RecipeDetail({ recipeId, onBack }) {
     )
   }
 
-  const toggleFavorite = () => {
-    const result = FavoritesService.toggleFavorite(recipeId)
-    if (result.success) {
-      setIsFavorite(!isFavorite)
-      // Muvaffaqiyatli xabarni ko'rsatish (opsional)
-      console.log(result.message)
-    } else {
-      // Xatolik xabarini ko'rsatish
-      console.error(result.message)
-    }
+  const handleToggleFavorite = () => {
+    toggleFavorite(recipeId)
   }
 
   return (
@@ -46,7 +36,12 @@ function RecipeDetail({ recipeId, onBack }) {
       </button>
 
       <div className="recipe-header">
-        <div className="recipe-image-large"></div>
+        <div
+          className="recipe-image-large"
+          style={{
+            backgroundImage: recipe.image ? `url(${recipe.image})` : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+          }}
+        ></div>
         <div className="recipe-main-info">
           <h1>{recipe.name}</h1>
           <p className="recipe-description">{recipe.description}</p>
@@ -71,7 +66,7 @@ function RecipeDetail({ recipeId, onBack }) {
           </div>
 
           <button
-            onClick={toggleFavorite}
+            onClick={handleToggleFavorite}
             className={`favorite-button ${isFavorite ? 'active' : ''}`}
           >
             {isFavorite ? '❤️ Sevimlilardan olib tashlash' : '🤍 Sevimlilarga qo\'shish'}

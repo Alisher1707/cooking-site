@@ -2,6 +2,7 @@ import React from 'react'
 import { useAppContext } from '../contexts/AppContext'
 import { useRecipeContext } from '../contexts/RecipeContext'
 import SearchBar from '../components/SearchBar'
+import '../styles/modern-recipes.css'
 
 function Recipes({ onSelectRecipe }) {
   const { searchQuery, selectedCategory, favorites, toggleFavorite } = useAppContext()
@@ -25,11 +26,19 @@ function Recipes({ onSelectRecipe }) {
           <div
             key={recipe.id}
             className="recipe-card"
+            onClick={() => onSelectRecipe(recipe.id)}
           >
-            <div className="recipe-image-placeholder"></div>
+            <div
+              className="recipe-image-placeholder"
+              style={{
+                backgroundImage: recipe.image ? `url(${recipe.image})` : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+              }}
+            ></div>
             <div className="recipe-info">
-              <h3 onClick={() => onSelectRecipe(recipe.id)}>{recipe.name}</h3>
-              <p className="recipe-description">{recipe.shortDescription}</p>
+              <div className="recipe-title-section">
+                <h3>{recipe.name}</h3>
+                <p className="recipe-description">{recipe.shortDescription}</p>
+              </div>
               <div className="recipe-meta">
                 <span className="cook-time">⏱️ {recipe.cookTime}</span>
                 <span className="difficulty">📊 {recipe.difficulty}</span>
@@ -49,6 +58,7 @@ function Recipes({ onSelectRecipe }) {
           </div>
         ))}
       </div>
+
 
       {filteredRecipes.length === 0 && (
         <div className="no-results">

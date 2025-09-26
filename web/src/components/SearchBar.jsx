@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useAppContext } from '../contexts/AppContext'
 import { useRecipeContext } from '../contexts/RecipeContext'
 import { saveSearchQuery, loadSearchHistory } from '../services/storageService'
+import '../styles/search-bar.css'
 
 function SearchBar({ placeholder = "Retsept qidiring...", showFilters = true }) {
   const { searchQuery, selectedCategory, setSearchQuery, setSelectedCategory } = useAppContext()
@@ -70,14 +71,6 @@ function SearchBar({ placeholder = "Retsept qidiring...", showFilters = true }) 
               ✕
             </button>
           )}
-
-          <button
-            type="submit"
-            className="search-submit-btn"
-            aria-label="Qidirish"
-          >
-            🔍
-          </button>
 
           {/* Search History Dropdown */}
           {isHistoryOpen && searchHistory.length > 0 && (
