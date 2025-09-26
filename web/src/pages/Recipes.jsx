@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import recipesData from '../data/recipes.json'
+import React from 'react'
+import { useAppContext } from '../contexts/AppContext'
+import { useRecipeContext } from '../contexts/RecipeContext'
+import SearchBar from '../components/SearchBar'
 
 function Recipes({ onSelectRecipe }) {
-  const [selectedCategory, setSelectedCategory] = useState('Barchasi')
-  const [searchTerm, setSearchTerm] = useState('')
+  const { searchQuery, selectedCategory, favorites, toggleFavorite } = useAppContext()
+  const { getFilteredRecipes } = useRecipeContext()
 
-  const filteredRecipes = recipesData.recipes.filter(recipe => {
-    const matchesCategory = selectedCategory === 'Barchasi' || recipe.category === selectedCategory
-    const matchesSearch = recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         recipe.shortDescription.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+  const filteredRecipes = getFilteredRecipes(searchQuery, selectedCategory)
 
   return (
     <div className="recipes-page">
@@ -20,27 +17,7 @@ function Recipes({ onSelectRecipe }) {
       </div>
 
       <div className="recipes-filters">
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Retsept qidiring..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-input"
-          />
-        </div>
-
-        <div className="category-filters">
-          {recipesData.categories.map(category => (
-            <button
-              key={category}
-              className={`filter-button ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <SearchBar />
       </div>
 
       <div className="recipes-grid">
@@ -48,11 +25,10 @@ function Recipes({ onSelectRecipe }) {
           <div
             key={recipe.id}
             className="recipe-card"
-            onClick={() => onSelectRecipe(recipe.id)}
           >
             <div className="recipe-image-placeholder"></div>
             <div className="recipe-info">
-              <h3>{recipe.name}</h3>
+              <h3 onClick={() => onSelectRecipe(recipe.id)}>{recipe.name}</h3>
               <p className="recipe-description">{recipe.shortDescription}</p>
               <div className="recipe-meta">
                 <span className="cook-time">⏱️ {recipe.cookTime}</span>
@@ -60,6 +36,16 @@ function Recipes({ onSelectRecipe }) {
               </div>
               <div className="recipe-category">{recipe.category}</div>
             </div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                toggleFavorite(recipe.id)
+              }}
+              className={`favorite-btn ${favorites.includes(recipe.id) ? 'active' : ''}`}
+              aria-label={favorites.includes(recipe.id) ? 'Sevimlilardan olib tashlash' : 'Sevimlilarga qo\'shish'}
+            >
+              {favorites.includes(recipe.id) ? '❤️' : '🤍'}
+            </button>
           </div>
         ))}
       </div>

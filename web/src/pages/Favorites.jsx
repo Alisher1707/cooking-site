@@ -1,49 +1,45 @@
-import React, { useState, useEffect } from 'react'
-import FavoritesService from '../services/favoritesService'
+import React, { useState, useMemo } from 'react'
+import { useAppContext } from '../contexts/AppContext'
+import { useRecipeContext } from '../contexts/RecipeContext'
 
 function Favorites({ onSelectRecipe }) {
-  const [favorites, setFavorites] = useState([])
-  const [sortBy, setSortBy] = useState('dateAdded') // 'dateAdded', 'name', 'cookTime', 'difficulty', 'category'
+  const { favorites, removeFavorite } = useAppContext()
+  const { getFavoriteRecipes } = useRecipeContext()
+  const [sortBy, setSortBy] = useState('name')
 
-  useEffect(() => {
-    // localStorage dan sevimlilarni yuklash
-    loadFavorites()
-  }, [])
+  const favoriteRecipes = getFavoriteRecipes(favorites)
 
-  useEffect(() => {
-    // Saralash o'zgarganda ro'yxatni yangilash
-    loadFavorites()
-  }, [sortBy])
+  const sortedFavorites = useMemo(() => {
+    const recipes = [...favoriteRecipes]
 
-  const loadFavorites = () => {
-    const sortedFavorites = FavoritesService.getSortedFavorites(sortBy)
-    setFavorites(sortedFavorites)
-  }
-
-  const removeFavorite = (recipeId) => {
-    const result = FavoritesService.removeFromFavorites(recipeId)
-    if (result.success) {
-      loadFavorites() // Ro'yxatni qayta yuklash
-    } else {
-      console.error(result.message)
+    switch (sortBy) {
+      case 'name':
+        return recipes.sort((a, b) => a.name.localeCompare(b.name))
+      case 'cookTime':
+        return recipes.sort((a, b) => {
+          const timeA = parseInt(a.cookTime) || 0
+          const timeB = parseInt(b.cookTime) || 0
+          return timeA - timeB
+        })
+      case 'difficulty':
+        const difficultyOrder = { 'Oson': 1, 'O\'rta': 2, 'Qiyin': 3 }
+        return recipes.sort((a, b) => {
+          return (difficultyOrder[a.difficulty] || 4) - (difficultyOrder[b.difficulty] || 4)
+        })
+      case 'category':
+        return recipes.sort((a, b) => a.category.localeCompare(b.category))
+      default:
+        return recipes
     }
-  }
+  }, [favoriteRecipes, sortBy])
 
   const clearAllFavorites = () => {
     if (window.confirm('Barcha sevimli retseptlarni o\'chirmoqchimisiz?')) {
-      const result = FavoritesService.clearAllFavorites()
-      if (result.success) {
-        setFavorites([])
-      } else {
-        console.error(result.message)
-      }
+      favorites.forEach(id => removeFavorite(id))
     }
   }
 
-  // Saralash endi FavoritesService da amalga oshiriladi
-  const sortedFavorites = favorites
-
-  if (favorites.length === 0) {
+  if (favoriteRecipes.length === 0) {
     return (
       <div className="favorites-page">
         <div className="page-header">
@@ -73,7 +69,7 @@ function Favorites({ onSelectRecipe }) {
     <div className="favorites-page">
       <div className="page-header">
         <h1>Sevimli retseptlar</h1>
-        <p>Siz yoqtirgan {favorites.length} ta retsept</p>
+        <p>Siz yoqtirgan {favoriteRecipes.length} ta retsept</p>
       </div>
 
       <div className="favorites-controls">
@@ -85,7 +81,6 @@ function Favorites({ onSelectRecipe }) {
             onChange={(e) => setSortBy(e.target.value)}
             className="sort-select"
           >
-            <option value="dateAdded">Qo'shilgan sanasi bo'yicha</option>
             <option value="name">Nom bo'yicha</option>
             <option value="cookTime">Pishirish vaqti bo'yicha</option>
             <option value="difficulty">Qiyinlik darajasi bo'yicha</option>
@@ -115,8 +110,8 @@ function Favorites({ onSelectRecipe }) {
                 <span className="difficulty">📊 {recipe.difficulty}</span>
               </div>
 
-              <div className="date-added">
-                Qo'shilgan: {new Date(recipe.dateAdded).toLocaleDateString('uz-UZ')}
+              <div className="recipe-category">
+                {recipe.category}
               </div>
             </div>
 
@@ -133,7 +128,7 @@ function Favorites({ onSelectRecipe }) {
                 className="remove-favorite-button"
                 title="Sevimlilardan olib tashlash"
               >
-                🗑️
+                ❤️
               </button>
             </div>
           </div>
@@ -142,18 +137,20 @@ function Favorites({ onSelectRecipe }) {
 
       <div className="favorites-stats">
         <div className="stat-item">
-          <strong>Jami sevimlilar:</strong> {favorites.length}
+          <strong>Jami sevimlilar:</strong> {favoriteRecipes.length}
         </div>
         <div className="stat-item">
           <strong>O'rtacha pishirish vaqti:</strong> {
-            Math.round(
-              favorites.reduce((sum, recipe) => {
-                const hours = recipe.cookTime.includes('soat')
-                  ? parseFloat(recipe.cookTime.match(/[\d.]+/)[0])
-                  : parseFloat(recipe.cookTime.match(/[\d.]+/)[0]) / 60
-                return sum + hours
-              }, 0) / favorites.length * 10
-            ) / 10
+            favoriteRecipes.length > 0
+              ? Math.round(
+                  favoriteRecipes.reduce((sum, recipe) => {
+                    const hours = recipe.cookTime.includes('soat')
+                      ? parseFloat(recipe.cookTime.match(/[\d.]+/)[0])
+                      : parseFloat(recipe.cookTime.match(/[\d.]+/)[0]) / 60
+                    return sum + hours
+                  }, 0) / favoriteRecipes.length * 10
+                ) / 10
+              : 0
           } soat
         </div>
       </div>

@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
+import { useAppContext } from '../contexts/AppContext'
 
-function Navigation({ currentPage, onNavigate }) {
+function Navigation() {
+  const { currentPage, setCurrentPage, favorites } = useAppContext()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navigationItems = [
     { id: 'home', label: 'Bosh sahifa', icon: '🏠' },
     { id: 'recipes', label: 'Retseptlar', icon: '📖' },
-    { id: 'favorites', label: 'Sevimlilar', icon: '❤️' },
+    { id: 'favorites', label: 'Sevimlilar', icon: '❤️', badge: favorites.length },
     { id: 'contact', label: 'Aloqa', icon: '📞' }
   ]
 
   const handleNavClick = (pageId) => {
-    onNavigate(pageId)
-    setIsMobileMenuOpen(false) // Mobile menyu yopish
+    setCurrentPage(pageId)
+    setIsMobileMenuOpen(false)
   }
 
   const toggleMobileMenu = () => {
@@ -43,6 +45,9 @@ function Navigation({ currentPage, onNavigate }) {
             >
               <span className="nav-icon">{item.icon}</span>
               <span className="nav-label">{item.label}</span>
+              {item.badge > 0 && (
+                <span className="nav-badge">{item.badge}</span>
+              )}
             </button>
           ))}
         </div>
@@ -72,6 +77,9 @@ function Navigation({ currentPage, onNavigate }) {
             >
               <span className="nav-icon">{item.icon}</span>
               <span className="nav-label">{item.label}</span>
+              {item.badge > 0 && (
+                <span className="nav-badge">{item.badge}</span>
+              )}
             </button>
           ))}
         </div>
