@@ -1,7 +1,9 @@
 import React from 'react'
+import { useAppContext } from '../contexts/AppContext'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const { navigateToRecipesWithCategory } = useAppContext()
 
   return (
     <footer className="footer">
@@ -20,22 +22,34 @@ function Footer() {
           {/* Kategoriyalar */}
           <div className="footer-categories">
             <div className="category-links">
-              <a href="#main-dishes" className="category-link">
+              <button
+                onClick={() => navigateToRecipesWithCategory('Asosiy taomlar')}
+                className="category-link"
+              >
                 <span className="category-icon">🍛</span>
                 <span>Asosiy taomlar</span>
-              </a>
-              <a href="#soups" className="category-link">
+              </button>
+              <button
+                onClick={() => navigateToRecipesWithCategory('Sho\'rvalar')}
+                className="category-link"
+              >
                 <span className="category-icon">🍲</span>
                 <span>Sho'rvalar</span>
-              </a>
-              <a href="#pastries" className="category-link">
+              </button>
+              <button
+                onClick={() => navigateToRecipesWithCategory('Pishiriqlar')}
+                className="category-link"
+              >
                 <span className="category-icon">🥟</span>
                 <span>Pishiriqlar</span>
-              </a>
-              <a href="#desserts" className="category-link">
+              </button>
+              <button
+                onClick={() => navigateToRecipesWithCategory('Shirinliklar')}
+                className="category-link"
+              >
                 <span className="category-icon">🍰</span>
                 <span>Shirinliklar</span>
-              </a>
+              </button>
             </div>
           </div>
 

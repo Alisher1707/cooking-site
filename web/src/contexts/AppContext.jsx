@@ -74,6 +74,10 @@ export function AppProvider({ children }) {
     setSelectedRecipeId: (id) => dispatch({ type: 'SET_SELECTED_RECIPE_ID', payload: id }),
     navigateToRecipe: (recipeId) => dispatch({ type: 'NAVIGATE_TO_RECIPE', payload: recipeId }),
     navigateToRecipes: () => dispatch({ type: 'SET_CURRENT_PAGE', payload: 'recipes' }),
+    navigateToRecipesWithCategory: (category) => {
+      dispatch({ type: 'SET_SELECTED_CATEGORY', payload: category })
+      dispatch({ type: 'SET_CURRENT_PAGE', payload: 'recipes' })
+    },
     navigateBack: () => dispatch({ type: 'SET_CURRENT_PAGE', payload: 'recipes' })
   }
 

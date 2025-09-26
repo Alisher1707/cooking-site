@@ -921,6 +921,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   background: rgba(52, 73, 94, 0.3);
   border-radius: 20px;
