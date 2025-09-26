@@ -45,31 +45,48 @@ function Contact() {
 
           <div className="info-item">
             <h3>📍 Manzil</h3>
-            <p>Toshkent, O'zbekiston</p>
+            <p>
+              <a
+                href="https://maps.google.com/?q=Tashkent,Uzbekistan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="location-link"
+              >
+                Toshkent, O'zbekiston
+              </a>
+            </p>
           </div>
 
           <div className="info-item">
             <h3>📞 Telefon</h3>
-            <p>+998 90 123 45 67</p>
+            <p>
+              <a href="tel:+998904003990" className="phone-link">
+                +998 90 400 39 90
+              </a>
+            </p>
           </div>
 
           <div className="info-item">
             <h3>✉️ Email</h3>
-            <p>info@cookingsite.uz</p>
+            <p>
+              <a href="mailto:halolfood@cookingsite.uz" className="email-link">
+                halolfood@cookingsite.uz
+              </a>
+            </p>
           </div>
 
           <div className="info-item">
             <h3>⏰ Ish vaqti</h3>
-            <p>Dushanba - Juma: 9:00 - 18:00</p>
-            <p>Shanba: 10:00 - 16:00</p>
-            <p>Yakshanba: Dam olish kuni</p>
+            <p className="working-hours weekdays">Dushanba - Juma: 9:00 - 18:00</p>
+            <p className="working-hours weekend">Shanba: 10:00 - 16:00</p>
+            <p className="working-hours closed">Yakshanba: Dam olish kuni</p>
           </div>
 
           <div className="social-media">
             <h3>🌐 Ijtimoiy tarmoqlar</h3>
             <div className="social-links">
               <a
-                href="https://t.me"
+                href="https://t.me/halolsffood"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link telegram"
@@ -81,7 +98,7 @@ function Contact() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/p/DC4LIeANEDC/?igsh=dG5kcXZhemczdnF6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link instagram"
@@ -93,7 +110,7 @@ function Contact() {
                 </svg>
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/watch?v=6C1nbmc3jlA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link youtube"
