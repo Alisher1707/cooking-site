@@ -317,6 +317,363 @@
         "Olovni sekin qiling",
         "Dimlab pishiring"
       ]
+    },
+    {
+      "id": 11,
+      "name": "Norin",
+      "image": "/img/norin.jpg",
+      "category": "Asosiy taomlar",
+      "shortDescription": "Salqin taom, yozgi ovqat",
+      "description": "Norin - yupqa kesılgan makarona va go'sht bilan, salqin holda xizmat qilinadigan an'anaviy taom.",
+      "cookTime": "30 daqiqa",
+      "prepTime": "1 soat",
+      "servings": 4,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "400g makarona",
+        "300g ot go'shti",
+        "200g piyoz",
+        "100g sabzi",
+        "Ziravorlar va ko'katlar"
+      ],
+      "instructions": [
+        "Go'shtni qaynatib pishiring",
+        "Makaronani ingichka kesing",
+        "Sabzavotlarni julyen qilib kesing",
+        "Barcha ingrediyentlarni aralashtiring",
+        "Salqin joyda 2 soat tindirib bering"
+      ],
+      "tips": [
+        "Salqin holda xizmat qiling",
+        "Go'shtni yaxshi muzlating"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Chuchvara",
+      "image": "/img/chuchvara.jpg",
+      "category": "Asosiy taomlar",
+      "shortDescription": "Kichik manti, sho'rvada",
+      "description": "Chuchvara - kichik mantiya o'xshash, sho'rva ichida xizmat qilinadigan mazali taom.",
+      "cookTime": "45 daqiqa",
+      "prepTime": "1.5 soat",
+      "servings": 6,
+      "difficulty": "Qiyin",
+      "ingredients": [
+        "300g un",
+        "200g qo'y go'shti",
+        "150g piyoz",
+        "2 l suv",
+        "Ko'katlar"
+      ],
+      "instructions": [
+        "Xamir qorib, yupqa yoying",
+        "Go'shtni maydalab, piyoz bilan aralashtiring",
+        "Kichik kvadratlar kesib, go'sht soling",
+        "Uchlarini yopib, chuchvara shaklini bering",
+        "Sho'rvada 15-20 daqiqa pishiring"
+      ],
+      "tips": [
+        "Xamirni juda yupqa qiling",
+        "Sho'rvani tuzlab oling"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Shorpa",
+      "image": "/img/shorpa.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Boy go'shtli sho'rva",
+      "description": "Shorpa - go'sht va sabzavotlardan tayyorlanadigan boy va mazali an'anaviy sho'rva.",
+      "cookTime": "2 soat",
+      "prepTime": "20 daqiqa",
+      "servings": 6,
+      "difficulty": "Oson",
+      "ingredients": [
+        "500g qo'y go'shti",
+        "200g kartoshka",
+        "100g sabzi",
+        "100g piyoz",
+        "Ko'katlar va ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni suv bilan qaynatib boshlang",
+        "Ko'pikni olib, 1 soat pishiring",
+        "Sabzavotlarni qo'shib, yangisidan pishiring",
+        "Kartoshkani qo'shib, yumshoq bo'lguncha pishiring",
+        "Ko'katlar bilan bezating"
+      ],
+      "tips": [
+        "Go'shtni sekin pishiring",
+        "Ko'pikni muntazam olib turing"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Naryn",
+      "image": "/img/naryn.jpg",
+      "category": "Sho'rvalar",
+      "shortDescription": "Qirgiz milliy sho'rvasi",
+      "description": "Naryn - ot go'shti va qo'lda tortilgan makarona bilan tayyorlanadigan an'anaviy sho'rva.",
+      "cookTime": "45 daqiqa",
+      "prepTime": "1 soat",
+      "servings": 4,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "400g makarona",
+        "300g ot go'shti",
+        "200g piyoz",
+        "Ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni qaynatib pishiring",
+        "Makaronani alohida pishiring",
+        "Piyozni halqa qilib kesing",
+        "Barcha ingrediyentlarni aralashtiring",
+        "Issiq holda xizmat qiling"
+      ],
+      "tips": [
+        "Makaronani haddan ortiq pishirmang",
+        "Go'sht sho'rvasi boy bo'lishi kerak"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Baklajan",
+      "image": "/img/baklajan.jpg",
+      "category": "Pishiriqlar",
+      "shortDescription": "Baklajan bilan pirog",
+      "description": "Baklajan - xamir va baklajan bilan tayyorlanadigan mazali va ozuqaviy pirog.",
+      "cookTime": "1 soat",
+      "prepTime": "45 daqiqa",
+      "servings": 8,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g un",
+        "400g baklajan",
+        "200g piyoz",
+        "100ml yog'",
+        "Ziravorlar"
+      ],
+      "instructions": [
+        "Baklajonni bo'laklarga kesib, tuzlab qo'ying",
+        "Xamir qorib, yoying",
+        "Baklajonni qovurib pishiring",
+        "Xamirga baklajonni solib, o'rang",
+        "Pechda 40 daqiqa pishiring"
+      ],
+      "tips": [
+        "Baklajonni avval tuzlab, achchiqligini oling",
+        "Xamirni yumshoq qiling"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Patir",
+      "image": "/img/patir.jpg",
+      "category": "Pishiriqlar",
+      "shortDescription": "An'anaviy o'zbek noni",
+      "description": "Patir - tandirda pishirilgan an'anaviy o'zbek noni, go'zal naqsh va xushbo'y ta'm bilan.",
+      "cookTime": "30 daqiqa",
+      "prepTime": "2 soat",
+      "servings": 6,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g un",
+        "250ml suv",
+        "50ml yog'",
+        "1 osh qoshiq tuz",
+        "1 choy qoshiq xamirturush"
+      ],
+      "instructions": [
+        "Barcha ingrediyentlarni aralashtiring",
+        "Xamir qorib, 1 soat tindiring",
+        "Dumaloq shaklga soling",
+        "Naqsh chiqaring",
+        "Tandirda yoki pechda pishiring"
+      ],
+      "tips": [
+        "Xamir yaxshi tindgan bo'lishi kerak",
+        "Issiq tandirda tez pishadi"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Yupqa",
+      "image": "/img/yupqa.jpg",
+      "category": "Pishiriqlar",
+      "shortDescription": "Yupqa xamirli pirog",
+      "description": "Yupqa - juda yupqa xamir va turli xil ichki bilan tayyorlanadigan an'anaviy pirog.",
+      "cookTime": "45 daqiqa",
+      "prepTime": "1 soat",
+      "servings": 6,
+      "difficulty": "Qiyin",
+      "ingredients": [
+        "400g un",
+        "300g kartoshka",
+        "200g piyoz",
+        "100ml yog'",
+        "Tuz va ziravorlar"
+      ],
+      "instructions": [
+        "Xamir qorib, juda yupqa yoying",
+        "Kartoshka va piyozni qovuring",
+        "Xamirga ichki solib, o'rang",
+        "Tovada yoki pechda pishiring",
+        "Issiq holda dasturxonga torting"
+      ],
+      "tips": [
+        "Xamirni juda yupqa qiling",
+        "Ichkini sovutib soling"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Qozonkabob",
+      "image": "/img/qozonkabob.jpg",
+      "category": "Pishiriqlar",
+      "shortDescription": "Qozonda pishirilgan kabob",
+      "description": "Qozonkabob - qozonda go'sht va sabzavotlar bilan tayyorlanadigan to'yimli va mazali taom.",
+      "cookTime": "1.5 soat",
+      "prepTime": "30 daqiqa",
+      "servings": 6,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "600g qo'y go'shti",
+        "400g kartoshka",
+        "200g sabzi",
+        "200g piyoz",
+        "Ziravorlar"
+      ],
+      "instructions": [
+        "Go'shtni bo'laklarga kesing",
+        "Qozonga yog' solib, go'shtni qovuring",
+        "Sabzavotlarni qo'shib, dimlab pishiring",
+        "Kartoshkani qo'shib, yumshoq bo'lguncha pishiring",
+        "Ziravorlar bilan tatib bering"
+      ],
+      "tips": [
+        "Go'shtni yaxshi qovuring",
+        "Sekin olovda pishiring"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Tandir go'shti",
+      "image": "/img/tandir_goshti.jpg",
+      "category": "Grill",
+      "shortDescription": "Tandirda pishirilgan go'sht",
+      "description": "Tandir go'shti - maxsus ziravorlar bilan marinadlangan va tandirda pishirilgan juda mazali go'sht.",
+      "cookTime": "2 soat",
+      "prepTime": "4 soat",
+      "servings": 8,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "2kg qo'y go'shti",
+        "200g piyoz",
+        "100ml sirka",
+        "Ziravorlar to'plami",
+        "Tuz"
+      ],
+      "instructions": [
+        "Go'shtni katta bo'laklarga kesing",
+        "Barcha ziravorlar bilan 3 soat marinadda saqlang",
+        "Tandirga osib qo'ying",
+        "1.5-2 soat davomida pishiring",
+        "Tayyor bo'lgach, bo'laklarga bo'ling"
+      ],
+      "tips": [
+        "Marinadda uzoqroq saqlang",
+        "Tandirni yaxshi qizdiring"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Jiz",
+      "image": "/img/jiz.jpg",
+      "category": "Grill",
+      "shortDescription": "Ichak go'shti grillda",
+      "description": "Jiz - qo'y ichagi va jigar go'shti aralashmasi, mangalda pishirilgan mazali taom.",
+      "cookTime": "45 daqiqa",
+      "prepTime": "1 soat",
+      "servings": 4,
+      "difficulty": "O'rta",
+      "ingredients": [
+        "500g qo'y ichagi",
+        "200g qo'y jigari",
+        "100g dumba yogi",
+        "Piyoz va ziravorlar"
+      ],
+      "instructions": [
+        "Ichakni yaxshi tozalab yuving",
+        "Jigar va yog'ni maydalang",
+        "Ichakka to'ldirib bog'lang",
+        "Mangalda aylantirib pishiring",
+        "Tayyor bo'lgach, bo'laklarga kesing"
+      ],
+      "tips": [
+        "Ichakni yaxshi tozalang",
+        "Sekin pishiring, yonmasin"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Baliq kabob",
+      "image": "/img/baliq_kabob.jpg",
+      "category": "Grill",
+      "shortDescription": "Grillda pishirilgan baliq",
+      "description": "Baliq kabob - maxsus ziravorlar bilan tayyorlangan va grillda pishirilgan mazali baliq taomi.",
+      "cookTime": "20 daqiqa",
+      "prepTime": "30 daqiqa",
+      "servings": 4,
+      "difficulty": "Oson",
+      "ingredients": [
+        "1kg baliq",
+        "100ml limon sharbati",
+        "50ml zaytun yog'i",
+        "Ziravorlar",
+        "Ko'katlar"
+      ],
+      "instructions": [
+        "Baliqni tozalab, bo'laklarga kesing",
+        "Limon va ziravorlar bilan marinadlang",
+        "30 daqiqa kutib turing",
+        "Grillda har tomonini 8-10 daqiqa pishiring",
+        "Ko'katlar bilan bezatib bering"
+      ],
+      "tips": [
+        "Baliqni haddan ortiq pishirmang",
+        "Limon bilan xizmat qiling"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Tovuq kabob",
+      "image": "/img/tovuq_kabob.jpg",
+      "category": "Grill",
+      "shortDescription": "Mangalda tovuq go'shti",
+      "description": "Tovuq kabob - yumshoq tovuq go'shti, maxsus marinad bilan tayyorlangan va grillda pishirilgan.",
+      "cookTime": "25 daqiqa",
+      "prepTime": "2 soat",
+      "servings": 6,
+      "difficulty": "Oson",
+      "ingredients": [
+        "1kg tovuq go'shti",
+        "150ml yogurt",
+        "50ml limon sharbati",
+        "Sarimsoq va ziravorlar"
+      ],
+      "instructions": [
+        "Tovuq go'shtini bo'laklarga kesing",
+        "Yogurt va ziravorlar bilan marinadlang",
+        "2 soat sovuq joyda saqlang",
+        "Grillda 20-25 daqiqa pishiring",
+        "Issiq holda xizmat qiling"
+      ],
+      "tips": [
+        "Yogurt marinadda yumshatadi",
+        "Muntazam aylantiring"
+      ]
     }
   ],
   "categories": [
