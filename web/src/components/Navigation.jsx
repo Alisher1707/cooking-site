@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import { useAppContext } from '../contexts/AppContext'
+import HomeIcon from '../icons/HomeIcon'
+import RecipeIcon from '../icons/RecipeIcon'
+import HeartIcon from '../icons/HeartIcon'
+import ContactIcon from '../icons/ContactIcon'
 
 function Navigation() {
   const { currentPage, setCurrentPage, favorites } = useAppContext()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navigationItems = [
-    { id: 'home', label: 'Bosh sahifa', icon: '🏠' },
-    { id: 'recipes', label: 'Retseptlar', icon: '📖' },
-    { id: 'favorites', label: 'Sevimlilar', icon: '❤️', badge: favorites.length },
-    { id: 'contact', label: 'Aloqa', icon: '📞' }
+    { id: 'home', label: 'Bosh sahifa', icon: HomeIcon },
+    { id: 'recipes', label: 'Retseptlar', icon: RecipeIcon },
+    { id: 'favorites', label: 'Sevimlilar', icon: HeartIcon, badge: favorites.length },
+    { id: 'contact', label: 'Aloqa', icon: ContactIcon }
   ]
 
   const handleNavClick = (pageId) => {
@@ -43,7 +47,9 @@ function Navigation() {
               onClick={() => handleNavClick(item.id)}
               className={`nav-item ${currentPage === item.id ? 'active' : ''}`}
             >
-              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-icon">
+                <item.icon size={20} />
+              </span>
               <span className="nav-label">{item.label}</span>
               {item.badge > 0 && (
                 <span className="nav-badge">{item.badge}</span>
@@ -75,7 +81,9 @@ function Navigation() {
               onClick={() => handleNavClick(item.id)}
               className={`mobile-nav-item ${currentPage === item.id ? 'active' : ''}`}
             >
-              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-icon">
+                <item.icon size={20} />
+              </span>
               <span className="nav-label">{item.label}</span>
               {item.badge > 0 && (
                 <span className="nav-badge">{item.badge}</span>
