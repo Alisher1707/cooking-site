@@ -17,6 +17,22 @@ export const translations = {
     heroSubtitle: 'Har qanday ta\'bga mos ajoyib retseptlarni kashf eting',
     heroButton: 'HAMMASINI KO\'RISH',
 
+    // Craving Section
+    cravingHeading: 'BIZ NIMA XOHLAYMIZ',
+    collection: 'KOLLEKSIYA',
+    cravingTitle1: 'TEZKOR VA OSON TOVUQLI KECHKI OVQATLAR',
+    cravingTitle2: 'MILLIY O\'ZBEK TAOMLARI RETSEPTLARI',
+    cravingTitle3: 'KUCHLI SALAT RETSEPTLARI',
+
+    // Explore More Section
+    exploreHeading: 'KO\'PROQ O\'RGANISH',
+    exploreCategory1: 'QULAY TAOMLAR KLASSIKASI',
+    exploreCategory2: 'XALQARO TAOMLAR',
+    exploreCategory3: 'NONUSHTA VA BRUNCH',
+    exploreCategory4: 'JAMOA TANLOVI',
+    exploreCategory5: 'TEZKOR VA OSON',
+    exploreCategory6: 'COPYCAT RETSEPTLAR',
+
     // Main Content
     welcome: 'Taom saytiga xush kelibsiz',
     subtitle: 'Sizning oshpazlik retseptlar veb-saytingiz',
@@ -45,6 +61,22 @@ export const translations = {
     heroSubtitle: 'Откройте для себя удивительные рецепты на любой вкус',
     heroButton: 'СМОТРЕТЬ ВСЕ',
 
+    // Craving Section
+    cravingHeading: 'ЧТО МЫ ХОТИМ',
+    collection: 'КОЛЛЕКЦИЯ',
+    cravingTitle1: 'БЫСТРЫЕ И ЛЕГКИЕ КУРИНЫЕ УЖИНЫ',
+    cravingTitle2: 'НАЦИОНАЛЬНЫЕ УЗБЕКСКИЕ БЛЮДА',
+    cravingTitle3: 'МОЩНЫЕ РЕЦЕПТЫ САЛАТОВ',
+
+    // Explore More Section
+    exploreHeading: 'УЗНАТЬ БОЛЬШЕ',
+    exploreCategory1: 'КЛАССИКА КОМФОРТНОЙ ЕДЫ',
+    exploreCategory2: 'МЕЖДУНАРОДНЫЕ БЛЮДА',
+    exploreCategory3: 'ЗАВТРАК И БРАНЧ',
+    exploreCategory4: 'ВЫБОР СООБЩЕСТВА',
+    exploreCategory5: 'БЫСТРО И ЛЕГКО',
+    exploreCategory6: 'РЕЦЕПТЫ COPYCAT',
+
     // Main Content
     welcome: 'Добро пожаловать на Еда',
     subtitle: 'Ваш сайт кулинарных рецептов',
@@ -72,6 +104,22 @@ export const translations = {
     heroTitle: 'ALL-TIME BEST DINNER RECIPES',
     heroSubtitle: 'Discover amazing recipes for every taste',
     heroButton: 'SEE THEM ALL',
+
+    // Craving Section
+    cravingHeading: 'WHAT WE\'RE CRAVING',
+    collection: 'COLLECTION',
+    cravingTitle1: 'QUICK & EASY CHICKEN DINNERS',
+    cravingTitle2: 'TRADITIONAL UZBEK DISHES',
+    cravingTitle3: 'POWERHOUSE SALAD RECIPES',
+
+    // Explore More Section
+    exploreHeading: 'EXPLORE MORE',
+    exploreCategory1: 'COMFORT FOOD CLASSICS',
+    exploreCategory2: 'INTERNATIONAL EATS',
+    exploreCategory3: 'BREAKFAST & BRUNCH',
+    exploreCategory4: 'COMMUNITY PICKS',
+    exploreCategory5: 'QUICK & EASY',
+    exploreCategory6: 'COPYCAT RECIPES',
 
     // Main Content
     welcome: 'Welcome to Food',

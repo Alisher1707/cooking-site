@@ -1,0 +1,151 @@
+.explore-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
+
+.explore-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.explore-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+}
+
+.explore-image-wrapper {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.explore-card:hover .explore-image-wrapper {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.explore-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover .explore-image {
+  transform: scale(1.1);
+}
+
+.explore-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .explore-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .explore-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .explore-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .explore-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .explore-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .explore-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .explore-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .explore-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .explore-title {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .explore-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .explore-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .explore-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .explore-title {
+    font-size: 0.75rem;
+  }
+}

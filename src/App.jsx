@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import CravingSection from './components/CravingSection';
+import ExploreMore from './components/ExploreMore';
 import './App.css';
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <CravingSection />
+      <ExploreMore />
     </div>
   );
 }

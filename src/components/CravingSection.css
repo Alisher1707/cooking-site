@@ -1,0 +1,164 @@
+.craving-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.craving-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.craving-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.craving-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.craving-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.craving-card:hover {
+  transform: translateY(-5px);
+}
+
+.craving-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.craving-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.craving-card:hover .craving-image {
+  transform: scale(1.05);
+}
+
+.craving-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.craving-content {
+  width: 100%;
+}
+
+.craving-collection {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.craving-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .craving-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .craving-image-wrapper {
+    height: 350px;
+  }
+
+  .craving-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .craving-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .craving-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .craving-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .craving-image-wrapper {
+    height: 300px;
+  }
+
+  .craving-overlay {
+    padding: 1.5rem;
+  }
+
+  .craving-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .craving-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .craving-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .craving-image-wrapper {
+    height: 250px;
+  }
+
+  .craving-overlay {
+    padding: 1.25rem;
+  }
+
+  .craving-collection {
+    font-size: 0.65rem;
+  }
+
+  .craving-title {
+    font-size: 1.25rem;
+  }
+}
