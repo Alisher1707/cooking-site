@@ -13,6 +13,8 @@ import RecipesPage from './pages/RecipesPage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import './App.css';
 
 function App() {
@@ -34,7 +36,11 @@ function App() {
             </>
           } />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/edit-profile" element={<EditProfilePage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
         <Footer />
       </div>

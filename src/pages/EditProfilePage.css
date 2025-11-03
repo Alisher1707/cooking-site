@@ -44,6 +44,28 @@
   letter-spacing: 0.5px;
 }
 
+/* Message */
+.edit-profile-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.edit-profile-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.edit-profile-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 /* Content */
 .edit-profile-content {
   background: white;
@@ -66,17 +88,41 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(135deg, #ff6b35 0%, #f4c542 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.avatar-preview .profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-preview svg {
+  transition: all 0.3s ease;
+}
+
+.avatar-preview:hover svg {
+  transform: scale(1.1);
 }
 
 .change-avatar-btn {
-  background-color: #ffd700;
-  color: #333;
+  background: linear-gradient(135deg, #ff6b35 0%, #f4c542 100%);
+  color: white;
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
@@ -84,12 +130,12 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
 }
 
 .change-avatar-btn:hover {
-  background-color: #ffed4e;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
 }
 
 /* Form */
@@ -127,8 +173,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ffd700;
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
 .form-group textarea {
@@ -165,14 +211,14 @@
 }
 
 .save-btn {
-  background-color: #ffd700;
-  color: #333;
+  background: linear-gradient(135deg, #ff6b35 0%, #f4c542 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
 }
 
 .save-btn:hover {
-  background-color: #ffed4e;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
 }
 
 /* Responsive */

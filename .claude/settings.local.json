@@ -6,7 +6,8 @@
       "Bash(del package-lock.json)",
       "Bash(node:*)",
       "Bash(npm --version)",
-      "Bash(npm config delete:*)"
+      "Bash(npm config delete:*)",
+      "Bash(npm run dev)"
     ],
     "deny": [],
     "ask": []

@@ -42,28 +42,28 @@ const SettingsPage = () => {
         <div className="settings-content">
           {/* Language Settings */}
           <div className="settings-section">
-            <h2 className="section-title">{t.settingsLanguage}</h2>
+            <h2 className="section-title">{t.settingsLanguage || 'TIL'}</h2>
             <div className="settings-group">
               <div className="language-options">
                 <button
                   className={`language-option ${language === 'uz' ? 'active' : ''}`}
                   onClick={() => changeLanguage('uz')}
                 >
-                  <span className="lang-flag">🇺🇿</span>
+                  <div className="lang-code">UZ</div>
                   <span className="lang-name">O'zbek</span>
                 </button>
                 <button
                   className={`language-option ${language === 'ru' ? 'active' : ''}`}
                   onClick={() => changeLanguage('ru')}
                 >
-                  <span className="lang-flag">🇷🇺</span>
+                  <div className="lang-code">RU</div>
                   <span className="lang-name">Русский</span>
                 </button>
                 <button
                   className={`language-option ${language === 'en' ? 'active' : ''}`}
                   onClick={() => changeLanguage('en')}
                 >
-                  <span className="lang-flag">🇬🇧</span>
+                  <div className="lang-code">GB</div>
                   <span className="lang-name">English</span>
                 </button>
               </div>

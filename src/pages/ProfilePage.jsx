@@ -1,10 +1,29 @@
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './ProfilePage.css';
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
+  const { user, logout, isAuthenticated } = useAuth();
   const { language } = useLanguage();
   const t = translations[language];
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    navigate('/login');
+    return null;
+  }
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  const handleEditProfile = () => {
+    navigate('/edit-profile');
+  };
 
   return (
     <div className="profile-page">
@@ -12,14 +31,18 @@ const ProfilePage = () => {
         {/* Profile Header */}
         <div className="profile-header">
           <div className="profile-avatar">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+            {user?.profileImage ? (
+              <img src={user.profileImage} alt={user.name} className="profile-avatar-img" />
+            ) : (
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            )}
           </div>
-          <h1 className="profile-name">{t.profileName}</h1>
-          <p className="profile-email">{t.profileEmail}</p>
-          <button className="profile-edit-btn">{t.profileEditButton}</button>
+          <h1 className="profile-name">{user?.name || 'Foydalanuvchi'}</h1>
+          <p className="profile-email">{user?.email || 'email@example.com'}</p>
+          <button className="profile-edit-btn" onClick={handleEditProfile}>{t.profileEditButton || 'Profilni tahrirlash'}</button>
         </div>
 
         {/* Profile Stats */}
@@ -104,27 +127,27 @@ const ProfilePage = () => {
           <div className="profile-section">
             <h2 className="section-title">{t.profileSettingsTitle}</h2>
             <div className="settings-list">
-              <button className="settings-item">
+              <button className="settings-item" onClick={handleEditProfile}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <span>{t.profileEditProfile}</span>
+                <span>{t.profileEditProfile || 'Profilni tahrirlash'}</span>
               </button>
-              <button className="settings-item">
+              <button className="settings-item" onClick={() => navigate('/settings')}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="3"></circle>
                   <path d="M12 1v6m0 6v6m6-10.5-3 3m-6 0-3-3m13.5 6h-6m-6 0H1"></path>
                 </svg>
-                <span>{t.profileSettings}</span>
+                <span>{t.profileSettings || 'Sozlamalar'}</span>
               </button>
-              <button className="settings-item">
+              <button className="settings-item logout-btn" onClick={handleLogout}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                   <polyline points="16 17 21 12 16 7"></polyline>
                   <line x1="21" y1="12" x2="9" y2="12"></line>
                 </svg>
-                <span>{t.profileLogout}</span>
+                <span>{t.profileLogout || 'Chiqish'}</span>
               </button>
             </div>
           </div>
