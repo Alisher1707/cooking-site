@@ -128,9 +128,10 @@
 .recipe-main-image {
   position: relative;
   width: 100%;
+  max-width: 700px;
+  margin: 0 auto 20px;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 

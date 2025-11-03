@@ -1,14 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './FeaturedRecipe2.css';
 
 const FeaturedRecipe2 = () => {
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language];
 
+  const handleRecipeClick = () => {
+    navigate('/recipe/2');
+  };
+
   return (
     <section className="featured-recipe2-section">
-      <div className="featured-recipe2-container">
+      <div className="featured-recipe2-container" onClick={handleRecipeClick}>
         <div className="featured-recipe2-content">
           <span className="featured-collection2-label">{t.collection}</span>
           <h2 className="featured-recipe2-title">{t.featured2Title}</h2>
