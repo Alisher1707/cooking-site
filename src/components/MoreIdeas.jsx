@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './MoreIdeas.css';
 
 const MoreIdeas = () => {
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -29,12 +31,16 @@ const MoreIdeas = () => {
     }
   ];
 
+  const handleViewAll = () => {
+    navigate('/recipes');
+  };
+
   return (
     <section className="more-ideas-section">
       <div className="more-ideas-container">
         <div className="more-ideas-header">
           <h2 className="more-ideas-heading">{t.moreIdeasHeading}</h2>
-          <a href="#all" className="view-all-link">{t.viewAll}</a>
+          <a href="#all" className="view-all-link" onClick={(e) => { e.preventDefault(); handleViewAll(); }}>{t.viewAll}</a>
         </div>
 
         <div className="more-ideas-grid">

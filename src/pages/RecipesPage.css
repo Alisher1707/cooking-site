@@ -1,0 +1,146 @@
+.recipes-page {
+  min-height: 100vh;
+  padding: 80px 20px 60px;
+  background-color: #f8f8f8;
+}
+
+.recipes-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recipes-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.recipe-card-page {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.recipe-card-page:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card-page:hover .recipe-image {
+  transform: scale(1.05);
+}
+
+.recipe-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: white;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-content {
+  padding: 25px;
+}
+
+.recipe-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.recipe-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.recipe-author {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .recipes-page {
+    padding: 60px 15px 40px;
+  }
+
+  .recipes-page-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .recipes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .recipe-image-wrapper {
+    height: 220px;
+  }
+
+  .recipe-content {
+    padding: 20px;
+  }
+
+  .recipe-title {
+    font-size: 1.1rem;
+  }
+
+  .recipe-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipes-page-title {
+    font-size: 1.6rem;
+  }
+
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-image-wrapper {
+    height: 200px;
+  }
+}

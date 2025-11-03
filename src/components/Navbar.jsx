@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import { UzbekistanFlag, RussiaFlag, UKFlag } from './Flags';
 import './Navbar.css';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const { language, changeLanguage } = useLanguage();
@@ -33,11 +35,19 @@ const Navbar = () => {
     { name: t.seasonal, path: '#seasonal' }
   ];
 
+  const handleLogoClick = () => {
+    navigate('/');
+  };
+
+  const handleProfileClick = () => {
+    navigate('/profile');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a href="#home">Food.</a>
+          <a href="#home" onClick={(e) => { e.preventDefault(); handleLogoClick(); }}>Food.</a>
         </div>
 
         <button
@@ -71,7 +81,7 @@ const Navbar = () => {
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
             </svg>
           </button>
-          <button className="navbar-icon user-icon" aria-label={t.userProfile}>
+          <button className="navbar-icon user-icon" aria-label={t.userProfile} onClick={handleProfileClick}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>

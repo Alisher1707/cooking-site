@@ -1,0 +1,288 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 80px 20px 60px;
+  background-color: #f8f8f8;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Profile Header */
+.profile-header {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.profile-email {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.profile-edit-btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-edit-btn:hover {
+  background-color: #ffed4e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Profile Stats */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+/* Profile Content */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Recipes Grid */
+.recipes-grid-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card-small {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.recipe-card-small:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-image-small {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recipe-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card-small:hover .recipe-image-small img {
+  transform: scale(1.1);
+}
+
+.recipe-info-small {
+  padding: 15px;
+}
+
+.recipe-info-small h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.recipe-date {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+/* Settings List */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #f8f8f8;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.settings-item:hover {
+  background: #e8e8e8;
+  transform: translateX(5px);
+}
+
+.settings-item svg {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.settings-item span {
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 60px 15px 40px;
+  }
+
+  .profile-header {
+    padding: 30px 20px;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .profile-section {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .recipes-grid-small {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-avatar svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-name {
+    font-size: 1.4rem;
+  }
+
+  .profile-edit-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
