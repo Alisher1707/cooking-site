@@ -1,14 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './FeaturedRecipe.css';
 
 const FeaturedRecipe = () => {
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language];
 
+  const handleRecipeClick = () => {
+    navigate('/recipe/1');
+  };
+
   return (
     <section className="featured-recipe-section">
-      <div className="featured-recipe-container">
+      <div className="featured-recipe-container" onClick={handleRecipeClick}>
         <div className="featured-recipe-image-wrapper">
           <img
             src="/img/osh.webp"

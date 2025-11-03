@@ -10,6 +10,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.featured-recipe-container:hover {
+  transform: translateY(-5px);
 }
 
 .featured-recipe-image-wrapper {

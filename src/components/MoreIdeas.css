@@ -1,6 +1,6 @@
 .more-ideas-section {
   padding: 4rem 2rem;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
 }
 
 .more-ideas-container {
@@ -45,15 +45,16 @@
 
 .recipe-card {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .recipe-image-wrapper {
@@ -75,15 +76,20 @@
 }
 
 .recipe-title {
-  padding: 1.5rem 1rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1a1a1a;
+  padding: 1.5rem 1.25rem;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 1.4;
   margin: 0;
   text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Responsive Design */

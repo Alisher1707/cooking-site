@@ -10,6 +10,7 @@ import FeaturedRecipe2 from './components/FeaturedRecipe2';
 import FindRecipes from './components/FindRecipes';
 import Footer from './components/Footer';
 import RecipesPage from './pages/RecipesPage';
+import RecipeDetailPage from './pages/RecipeDetailPage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
@@ -36,6 +37,7 @@ function App() {
             </>
           } />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/recipe/:id" element={<RecipeDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
