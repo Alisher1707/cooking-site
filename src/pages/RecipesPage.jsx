@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './RecipesPage.css';
@@ -100,7 +101,7 @@ const RecipesPage = () => {
 
         <div className="recipes-grid">
           {recipes.map((recipe) => (
-            <div key={recipe.id} className="recipe-card-page">
+            <Link key={recipe.id} to={`/recipe/all/${recipe.id}`} className="recipe-card-page">
               <div className="recipe-image-wrapper">
                 <img src={recipe.image} alt={recipe.title} className="recipe-image" />
                 <div className="recipe-badge">RECIPE</div>
@@ -110,7 +111,7 @@ const RecipesPage = () => {
                 <p className="recipe-description">{recipe.description}</p>
                 <p className="recipe-author">-{recipe.author}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

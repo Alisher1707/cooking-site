@@ -393,5 +393,203 @@ export const recipesDetails = {
     ],
     nutrition: { calories: "150 kcal", protein: "2 g", carbs: "36 g", fat: "0.5 g" },
     tags: ["Meva", "Desert", "Sog'lom"]
+  },
+
+  14: {
+    // Achik-chuchuk salat
+    id: 14,
+    title: "ACHIQ-CHUCHUK SALAT",
+    category: "SALAT",
+    description: "Yangi pomidor, bodring va piyoz bilan tayyorlanadigan an'anaviy o'zbek salati.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/achik-chuchuk.html",
+    prepTime: "10 daqiqa",
+    cookTime: "0 daqiqa",
+    totalTime: "10 daqiqa",
+    servings: 4,
+    difficulty: "Oson",
+    mainImage: "/img/salat.webp",
+    images: ["/img/SABZAVOTLI QOVURMA.jpg", "/img/page-3.webp", "/img/category-1.webp"],
+    ingredients: [
+      { name: "Pomidor", amount: "4 dona", adjustable: true },
+      { name: "Bodring", amount: "2 dona", adjustable: true },
+      { name: "Piyoz", amount: "2 dona", adjustable: true },
+      { name: "Yashil ko'kat", amount: "1 bog'", adjustable: true },
+      { name: "Tuz", amount: "ta'bga ko'ra", adjustable: false },
+      { name: "O'simlik yog'i", amount: "2 osh qoshiq", adjustable: true }
+    ],
+    steps: [
+      { number: 1, title: "Sabzavotlarni to'g'rash", description: "Pomidor, bodring va piyozni yupqa halqalar shaklida to'g'rang." },
+      { number: 2, title: "Aralashtirish", description: "Barcha sabzavotlarni idishda aralashtiring." },
+      { number: 3, title: "Ko'kat qo'shish", description: "Maydalangan yashil ko'kat qo'shing." },
+      { number: 4, title: "Xizmat qilish", description: "Tuz va yog' qo'shib, yaxshilab aralashtiring." }
+    ],
+    nutrition: { calories: "80 kcal", protein: "2 g", carbs: "12 g", fat: "3 g" },
+    tags: ["Salat", "O'zbek", "Yangi"]
+  },
+
+  15: {
+    // Tovuqli kechki ovqat
+    id: 15,
+    title: "TOVUQLI KECHKI OVQAT",
+    category: "KECHKI OVQAT",
+    description: "Tezkor va oson tayyorlanadigan mazali tovuqli taom.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/chicken-dinner.html",
+    prepTime: "15 daqiqa",
+    cookTime: "30 daqiqa",
+    totalTime: "45 daqiqa",
+    servings: 4,
+    difficulty: "Oson",
+    mainImage: "/img/chicken.jpg",
+    images: ["/img/FAJITAS.jpg", "/img/GO'SHT VA BROCCOLI QOVURMA.jpg", "/img/kabob-1.jpg"],
+    ingredients: [
+      { name: "Tovuq filesi", amount: "600 g", adjustable: true },
+      { name: "Kartoshka", amount: "4 dona", adjustable: true },
+      { name: "Sabzi", amount: "2 dona", adjustable: true },
+      { name: "Piyoz", amount: "1 dona", adjustable: true },
+      { name: "Sarimsoq", amount: "4 bo'lak", adjustable: true },
+      { name: "Ziravorlar", amount: "ta'bga ko'ra", adjustable: false }
+    ],
+    steps: [
+      { number: 1, title: "Tovuqni tayyorlash", description: "Tovuq filesini bo'laklarga bo'lib, ziravorlang." },
+      { number: 2, title: "Sabzavotlarni qovurish", description: "Piyoz, sabzi va kartoshkani qovuring." },
+      { number: 3, title: "Tovuq qo'shish", description: "Tovuqni qo'shib, 20-25 daqiqa pishiring." },
+      { number: 4, title: "Xizmat qilish", description: "Issiq holda yangi ko'katlar bilan torting." }
+    ],
+    nutrition: { calories: "420 kcal", protein: "38 g", carbs: "35 g", fat: "12 g" },
+    tags: ["Tovuq", "Kechki ovqat", "Oson"]
+  },
+
+  16: {
+    // Qulay taomlar klassikasi
+    id: 16,
+    title: "QULAY TAOMLAR KLASSIKASI",
+    category: "KLASSIK",
+    description: "An'anaviy va sevimli uy taomlar to'plami.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/comfort-food.html",
+    prepTime: "25 daqiqa",
+    cookTime: "40 daqiqa",
+    totalTime: "1 soat 5 daqiqa",
+    servings: 6,
+    difficulty: "O'rta",
+    mainImage: "/img/category-1.webp",
+    images: ["/img/category-2.webp", "/img/category-3.webp", "/img/page-1.webp"],
+    ingredients: [
+      { name: "Makaron", amount: "500 g", adjustable: true },
+      { name: "Pishloq", amount: "300 g", adjustable: true },
+      { name: "Qaymoq", amount: "200 ml", adjustable: true },
+      { name: "Go'sht", amount: "400 g", adjustable: true },
+      { name: "Pomidor sousi", amount: "300 ml", adjustable: true },
+      { name: "Ziravorlar", amount: "ta'bga ko'ra", adjustable: false }
+    ],
+    steps: [
+      { number: 1, title: "Makaron pishirish", description: "Makaronni sho'r suvda pishiring." },
+      { number: 2, title: "Go'shtni qovurish", description: "Go'shtni qovurib, pomidor sousi qo'shing." },
+      { number: 3, title: "Pishloq sousi", description: "Qaymoq va pishloqdan sous tayyorlang." },
+      { number: 4, title: "Aralashtirish", description: "Barcha ingredientlarni aralashtiring va issiq holda torting." }
+    ],
+    nutrition: { calories: "580 kcal", protein: "32 g", carbs: "58 g", fat: "24 g" },
+    tags: ["Klassik", "Qulay", "Uy taomi"]
+  },
+
+  17: {
+    // Xalqaro taomlar
+    id: 17,
+    title: "XALQARO TAOMLAR",
+    category: "XALQARO",
+    description: "Dunyo oshxonalarining eng yaxshi retseptlari.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/international.html",
+    prepTime: "30 daqiqa",
+    cookTime: "35 daqiqa",
+    totalTime: "1 soat 5 daqiqa",
+    servings: 4,
+    difficulty: "O'rta",
+    mainImage: "/img/category-2.webp",
+    images: ["/img/FAJITAS.jpg", "/img/page-2.webp", "/img/GO'SHT VA BROCCOLI QOVURMA.jpg"],
+    ingredients: [
+      { name: "Guruch", amount: "400 g", adjustable: true },
+      { name: "Dengiz mahsulotlari", amount: "500 g", adjustable: true },
+      { name: "Qalampir", amount: "3 dona", adjustable: true },
+      { name: "Piyoz", amount: "2 dona", adjustable: true },
+      { name: "Sarimsoq", amount: "5 bo'lak", adjustable: true },
+      { name: "Zafaron", amount: "1 choy qoshiq", adjustable: true }
+    ],
+    steps: [
+      { number: 1, title: "Guruchni tayyorlash", description: "Guruchni zafaron bilan pishiring." },
+      { number: 2, title: "Dengiz mahsulotlari", description: "Dengiz mahsulotlarini qovuring." },
+      { number: 3, title: "Sabzavotlar", description: "Qalampir va piyozni qo'shing." },
+      { number: 4, title: "Xizmat qilish", description: "Barcha ingredientlarni aralashtiring va torting." }
+    ],
+    nutrition: { calories: "480 kcal", protein: "35 g", carbs: "62 g", fat: "8 g" },
+    tags: ["Xalqaro", "Dengiz", "Paella"]
+  },
+
+  18: {
+    // Nonushta va brunch
+    id: 18,
+    title: "NONUSHTA VA BRUNCH",
+    category: "NONUSHTA",
+    description: "Kunni boshlaydigan mazali va to'g'arli nonushta taomlar.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/breakfast.html",
+    prepTime: "20 daqiqa",
+    cookTime: "15 daqiqa",
+    totalTime: "35 daqiqa",
+    servings: 4,
+    difficulty: "Oson",
+    mainImage: "/img/category-3.webp",
+    images: ["/img/page-1.webp", "/img/page-4.webp", "/img/MEVALI DESERT.jpg"],
+    ingredients: [
+      { name: "Tuxum", amount: "6 dona", adjustable: true },
+      { name: "Non", amount: "8 bo'lak", adjustable: true },
+      { name: "Bekon", amount: "200 g", adjustable: true },
+      { name: "Qaymoq", amount: "100 ml", adjustable: true },
+      { name: "Pishloq", amount: "150 g", adjustable: true },
+      { name: "Pomidor", amount: "2 dona", adjustable: true }
+    ],
+    steps: [
+      { number: 1, title: "Bekonni qovurish", description: "Bekonni xirillashguncha qovuring." },
+      { number: 2, title: "Tuxum tayyorlash", description: "Tuxumni xohlaganingizcha pishiring." },
+      { number: 3, title: "Non qovurish", description: "Nonni tosda qizartirib qovuring." },
+      { number: 4, title: "Xizmat qilish", description: "Barcha taomlarni birga joylashtiring va issiq holda torting." }
+    ],
+    nutrition: { calories: "520 kcal", protein: "28 g", carbs: "42 g", fat: "26 g" },
+    tags: ["Nonushta", "Brunch", "Tuxum"]
+  },
+
+  19: {
+    // Tezkor va oson
+    id: 19,
+    title: "TEZKOR VA OSON TAOMLAR",
+    category: "TEZKOR",
+    description: "Band kunlar uchun tezkor tayyorlanadigan mazali taomlar.",
+    author: "From food blog AI Dente",
+    authorLink: "http://www.aldenteblog.com/quick-easy.html",
+    prepTime: "10 daqiqa",
+    cookTime: "15 daqiqa",
+    totalTime: "25 daqiqa",
+    servings: 4,
+    difficulty: "Oson",
+    mainImage: "/img/category-4.webp",
+    images: ["/img/SABZAVOTLI QOVURMA.jpg", "/img/chicken.jpg", "/img/page-3.webp"],
+    ingredients: [
+      { name: "Noodles", amount: "400 g", adjustable: true },
+      { name: "Sabzavotlar (aralash)", amount: "300 g", adjustable: true },
+      { name: "Soya sousi", amount: "4 osh qoshiq", adjustable: true },
+      { name: "Sarimsoq", amount: "3 bo'lak", adjustable: true },
+      { name: "Zanjabil", amount: "2 sm", adjustable: true },
+      { name: "Yog'", amount: "2 osh qoshiq", adjustable: true }
+    ],
+    steps: [
+      { number: 1, title: "Noodles pishirish", description: "Noodlesni ko'rsatma bo'yicha pishiring." },
+      { number: 2, title: "Sabzavotlarni qovurish", description: "Yuqori olovda sabzavotlarni tez qovuring." },
+      { number: 3, title: "Aralashtirish", description: "Noodles va sabzavotlarni soya sousi bilan aralashtiring." },
+      { number: 4, title: "Xizmat qilish", description: "Issiq holda darhol torting." }
+    ],
+    nutrition: { calories: "380 kcal", protein: "12 g", carbs: "65 g", fat: "8 g" },
+    tags: ["Tezkor", "Oson", "Noodles"]
   }
 };
