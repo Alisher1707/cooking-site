@@ -7,18 +7,18 @@ const FanFavorites = () => {
   const t = translations[language];
 
   const favorites = [
-    { id: 1, image: '/img/fan-1.jpg', title: t.fanRecipe1 },
-    { id: 2, image: '/img/fan-2.jpg', title: t.fanRecipe2 },
-    { id: 3, image: '/img/fan-3.jpg', title: t.fanRecipe3 },
-    { id: 4, image: '/img/fan-4.jpg', title: t.fanRecipe4 },
-    { id: 5, image: '/img/fan-5.jpg', title: t.fanRecipe5 },
-    { id: 6, image: '/img/fan-6.jpg', title: t.fanRecipe6 },
-    { id: 7, image: '/img/fan-7.jpg', title: t.fanRecipe7 },
-    { id: 8, image: '/img/fan-8.jpg', title: t.fanRecipe8 },
-    { id: 9, image: '/img/fan-9.jpg', title: t.fanRecipe9 },
-    { id: 10, image: '/img/fan-10.jpg', title: t.fanRecipe10 },
-    { id: 11, image: '/img/fan-11.jpg', title: t.fanRecipe11 },
-    { id: 12, image: '/img/fan-12.jpg', title: t.fanRecipe12 },
+    { id: 1, image: '/img/kabob-1.jpg', title: "PECHDA PISHIRILGAN QOVURG'ALAR" },
+    { id: 2, image: '/img/category-1.webp', title: 'MOZZARELLA TAYOQCHALARI' },
+    { id: 3, image: '/img/page-1.webp', title: '5 DAQIQALIK VEGAN PANCAKE' },
+    { id: 4, image: '/img/page-2.webp', title: 'SHAKSHUKA' },
+    { id: 5, image: '/img/kabob-2.jpg', title: 'ODDIY PECHDA PISHIRILGAN DENGIZ BASS' },
+    { id: 6, image: '/img/chicken.jpg', title: "GO'SHT VA BROCCOLI QOVURMA" },
+    { id: 7, image: '/img/category-2.webp', title: 'FAJITAS' },
+    { id: 8, image: '/img/category-3.webp', title: 'QAYMOGʻLI KREM' },
+    { id: 9, image: '/img/kabob-3.jpg', title: 'SABZAVOTLI QOVURMA' },
+    { id: 10, image: '/img/osh.webp', title: "O'ZBEK OSHI" },
+    { id: 11, image: '/img/salat.webp', title: 'TOVUQLI SALAT' },
+    { id: 12, image: '/img/page-4.webp', title: 'MEVALI DESERT' },
   ];
 
   return (
