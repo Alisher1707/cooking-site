@@ -86,6 +86,78 @@
   transform: translateY(0);
 }
 
+/* Search Results Dropdown */
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #f8f8f8;
+}
+
+.search-result-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.search-result-info {
+  flex: 1;
+  text-align: left;
+}
+
+.search-result-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: block;
+}
+
+.search-no-results {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .find-recipes-section {
@@ -136,6 +208,19 @@
   .search-button {
     width: 100%;
     padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .search-result-item {
+    padding: 0.75rem;
+  }
+
+  .search-result-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .search-result-title {
     font-size: 0.9rem;
   }
 }
