@@ -70,6 +70,14 @@
   margin-bottom: 25px;
 }
 
+/* Time info inline */
+.recipe-time-inline {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
 /* Action buttons */
 .recipe-actions {
   display: flex;

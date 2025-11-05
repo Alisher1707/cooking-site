@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import './RecipeDetailPage.css';
 
-const KabobRecipePage = () => {
+const ShashlikRecipePage = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   const { user } = useAuth();
@@ -14,7 +14,7 @@ const KabobRecipePage = () => {
 
   // Recipe data
   const recipe = {
-    id: 2,
+    id: 3,
     title: "SHASHLIK - O'ZBEK KABOBLARI",
     category: "KOLLEKSIYA",
     description: "Shashlik - O'zbekistonda juda mashhur bo'lgan kabob turi. Mol go'shti yoki qo'y go'shtidan tayyorlanadigan, olovda pishiriladigan bu mazali taom har qanday ziyofatning bezagidir.",
@@ -106,64 +106,19 @@ const KabobRecipePage = () => {
 
   return (
     <div className="recipe-detail-page">
-      {/* Header with back button */}
-      <div className="recipe-detail-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-          </svg>
-        </button>
-      </div>
-
       <div className="recipe-detail-container">
-        {/* Category */}
-        <p className="recipe-category">{recipe.category}</p>
-
         {/* Title */}
         <h1 className="recipe-title">{recipe.title}</h1>
 
         {/* Description */}
         <p className="recipe-description">{recipe.description}</p>
 
-        {/* Author credit */}
-        <p className="recipe-author">
-          "{recipe.author} ({recipe.authorLink})"
+        {/* Time info inline */}
+        <p className="recipe-time-inline">
+          Tayyorlash{recipe.prepTime}<br/>
+          Pishirish{recipe.cookTime}<br/>
+          Jami{recipe.totalTime}
         </p>
-
-        {/* Action buttons */}
-        <div className="recipe-actions">
-          <button className={`action-btn ${isSaved ? 'active' : ''}`} onClick={handleSave}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill={isSaved ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-            </svg>
-          </button>
-          <button className="action-btn" onClick={handlePrint}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-              <path d="M6 14h12v8H6z"></path>
-            </svg>
-          </button>
-          <button className="action-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-              <polyline points="16 6 12 2 8 6"></polyline>
-              <line x1="12" y1="2" x2="12" y2="15"></line>
-            </svg>
-          </button>
-          <button className="action-btn" onClick={handleShare}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </button>
-          <button className="action-btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            MEN BUNI TAYYORLADIM
-          </button>
-        </div>
 
         {/* Main image */}
         <div className="recipe-main-image">
@@ -279,4 +234,4 @@ const KabobRecipePage = () => {
   );
 };
 
-export default KabobRecipePage;
+export default ShashlikRecipePage;
