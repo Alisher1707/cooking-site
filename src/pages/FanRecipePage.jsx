@@ -1,83 +1,50 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
+import { recipesDetails } from '../data/recipesDetails';
 import './RecipeDetailPage.css';
 
-const ShashlikRecipePage = () => {
+const FanRecipePage = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const { language } = useLanguage();
   const { user } = useAuth();
 
-  const [servings, setServings] = useState(4);
-  const [isSaved, setIsSaved] = useState(false);
-
-  // Recipe data
-  const recipe = {
-    id: 3,
-    title: "SHASHLIK - O'ZBEK KABOBLARI",
-    category: "KOLLEKSIYA",
-    description: "Shashlik - O'zbekistonda juda mashhur bo'lgan kabob turi. Mol go'shti yoki qo'y go'shtidan tayyorlanadigan, olovda pishiriladigan bu mazali taom har qanday ziyofatning bezagidir.",
-    author: "From food blog AI Dente",
-    authorLink: "http://www.aldenteblog.com/shashlik.html",
-    prepTime: "30 daqiqa",
-    cookTime: "20 daqiqa",
-    totalTime: "50 daqiqa",
-    servings: 4,
-    difficulty: "Oson",
-    mainImage: "/img/kabob-1.jpg",
-    images: [
-      "/img/kabob-2.jpg",
-      "/img/kabob-3.jpg",
-      "/img/kabob-4.jpg"
-    ],
-    ingredients: [
-      { name: "Mol go'shti (yoki qo'y go'shti)", amount: "1 kg", adjustable: true },
-      { name: "Piyoz", amount: "500 g", adjustable: true },
-      { name: "Sirka", amount: "3 osh qoshiq", adjustable: true },
-      { name: "Zira", amount: "2 choy qoshiq", adjustable: true },
-      { name: "Qora murch", amount: "1 choy qoshiq", adjustable: true },
-      { name: "Tuz", amount: "ta'bga ko'ra", adjustable: false },
-      { name: "Yog'", amount: "100 g", adjustable: true },
-      { name: "Ko'katlar (koriander, jambul)", amount: "1 bog'lam", adjustable: true }
-    ],
-    steps: [
-      {
-        number: 1,
-        title: "Go'shtni tayyorlash",
-        description: "Go'shtni 4-5 sm kubik shaklida to'g'rang. Piyozni mayda to'g'rang va go'shtga qo'shing."
-      },
-      {
-        number: 2,
-        title: "Marinad tayyorlash",
-        description: "Sirka, zira, qora murch va tuzni qo'shib yaxshilab aralashtiring. Go'shtni kamida 2-3 soat marinadda saqlang (kechasi qoldirsangiz yaxshiroq)."
-      },
-      {
-        number: 3,
-        title: "Shampurlarga tizish",
-        description: "Go'shtni shampurlarga tizing. Go'sht bo'laklarini bir-biriga yopishtirib tizish kerak."
-      },
-      {
-        number: 4,
-        title: "Pishirish",
-        description: "Cho'g'lar ustida har tomondan 15-20 daqiqa pishiring. Pishayotganda vaqti-vaqti bilan aylantirib turing."
-      },
-      {
-        number: 5,
-        title: "Dasturxonga tortish",
-        description: "Tayyor bo'lgach lavash, ko'katlar va piyoz bilan dasturxonga torting. Issiq holda xizmat qiling."
-      }
-    ],
-    nutrition: {
-      calories: "450 kcal",
-      protein: "35 g",
-      carbs: "5 g",
-      fat: "32 g"
-    },
-    tags: ["Shashlik", "Kabob", "Milliy taom", "Bayram", "Yozgi taom"]
+  // Map FanFavorites IDs to recipesDetails IDs
+  const recipeIdMap = {
+    1: 4,  // Pechda pishirilgan qovurg'alar
+    2: 5,  // Mozzarella tayoqchalari
+    3: 6,  // 5 daqiqalik vegan pancake
+    4: 7,  // Shakshuka
+    5: 1,  // Oddiy pechda pishirilgan dengiz bass (using Osh for now)
+    6: 8,  // Go'sht va broccoli qovurma
+    7: 9,  // Fajitas
+    8: 10, // Qaymoqli krem
+    9: 11, // Sabzavotli qovurma
+    10: 1, // O'zbek oshi
+    11: 12, // Tovuqli salat
+    12: 13  // Mevali desert
   };
 
-  const adjustIngredient = (amount, originalServings = 4) => {
+  const recipeId = recipeIdMap[parseInt(id)];
+  const recipe = recipesDetails[recipeId];
+
+  const [servings, setServings] = useState(recipe?.servings || 6);
+  const [isSaved, setIsSaved] = useState(false);
+
+  if (!recipe) {
+    return (
+      <div className="recipe-detail-page">
+        <div className="recipe-detail-container">
+          <h1>Retsept topilmadi</h1>
+          <button onClick={() => navigate(-1)}>Orqaga qaytish</button>
+        </div>
+      </div>
+    );
+  }
+
+  const adjustIngredient = (amount, originalServings) => {
     if (amount === "ta'bga ko'ra") return amount;
     const multiplier = servings / originalServings;
     const numAmount = parseFloat(amount);
@@ -87,7 +54,6 @@ const ShashlikRecipePage = () => {
 
   const handleSave = () => {
     setIsSaved(!isSaved);
-    // Add to saved recipes in localStorage
   };
 
   const handleShare = () => {
@@ -127,7 +93,7 @@ const ShashlikRecipePage = () => {
 
         {/* Author credit */}
         <p className="recipe-author">
-          "{recipe.author} ({recipe.authorLink})"
+          {recipe.author} ({recipe.authorLink})
         </p>
 
         {/* Action buttons */}
@@ -168,7 +134,7 @@ const ShashlikRecipePage = () => {
         {/* Main image */}
         <div className="recipe-main-image">
           <img src={recipe.mainImage} alt={recipe.title} />
-          <div className="image-credit">PHOTO BY IZY HOSSACK 😊</div>
+          <div className="image-credit">PHOTO BY IZY HOSSACK</div>
         </div>
 
         {/* Additional images */}
@@ -279,4 +245,4 @@ const ShashlikRecipePage = () => {
   );
 };
 
-export default ShashlikRecipePage;
+export default FanRecipePage;

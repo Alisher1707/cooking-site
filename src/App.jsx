@@ -13,6 +13,7 @@ import RecipesPage from './pages/RecipesPage';
 import RecipeDetailPage from './pages/RecipeDetailPage';
 import KabobRecipePage from './pages/KabobRecipePage';
 import ShashlikRecipePage from './pages/ShashlikRecipePage';
+import FanRecipePage from './pages/FanRecipePage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
@@ -42,6 +43,7 @@ function App() {
           <Route path="/recipe/1" element={<RecipeDetailPage />} />
           <Route path="/recipe/2" element={<KabobRecipePage />} />
           <Route path="/recipe/3" element={<ShashlikRecipePage />} />
+          <Route path="/recipe/fan/:id" element={<FanRecipePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />

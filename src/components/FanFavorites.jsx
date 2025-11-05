@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './FanFavorites.css';
@@ -31,12 +32,12 @@ const FanFavorites = () => {
 
         <div className="fan-favorites-grid">
           {favorites.map((recipe) => (
-            <div key={recipe.id} className="fan-card">
+            <Link key={recipe.id} to={`/recipe/fan/${recipe.id}`} className="fan-card">
               <div className="fan-card-image-wrapper">
                 <img src={recipe.image} alt={t[recipe.titleKey]} className="fan-card-image" />
               </div>
               <h3 className="fan-card-title">{t[recipe.titleKey]}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
