@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import { UzbekistanFlag, RussiaFlag, UKFlag } from './Flags';
@@ -26,13 +26,13 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { name: t.recipes, path: '#recipes' },
-    { name: t.popular, path: '#popular' },
-    { name: t.meatSeafood, path: '#meat-seafood' },
-    { name: t.healthyDiet, path: '#healthy-diet' },
-    { name: t.holidays, path: '#holidays' },
-    { name: t.cuisine, path: '#cuisine' },
-    { name: t.seasonal, path: '#seasonal' }
+    { name: t.recipes, path: '/category/recipes' },
+    { name: t.popular, path: '/category/popular' },
+    { name: t.meatSeafood, path: '/category/meat-seafood' },
+    { name: t.healthyDiet, path: '/category/healthy-diet' },
+    { name: t.holidays, path: '/category/holidays' },
+    { name: t.cuisine, path: '/category/cuisine' },
+    { name: t.seasonal, path: '/category/seasonal' }
   ];
 
   const handleLogoClick = () => {
@@ -62,9 +62,9 @@ const Navbar = () => {
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           {menuItems.map((item, index) => (
             <li key={index} className="navbar-item">
-              <a href={item.path} className="navbar-link">
+              <Link to={item.path} className="navbar-link" onClick={() => setIsMenuOpen(false)}>
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

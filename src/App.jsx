@@ -15,6 +15,8 @@ import KabobRecipePage from './pages/KabobRecipePage';
 import ShashlikRecipePage from './pages/ShashlikRecipePage';
 import FanRecipePage from './pages/FanRecipePage';
 import AllRecipePage from './pages/AllRecipePage';
+import CategoryPage from './pages/CategoryPage';
+import CategoryRecipePage from './pages/CategoryRecipePage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
@@ -46,6 +48,8 @@ function App() {
           <Route path="/recipe/3" element={<ShashlikRecipePage />} />
           <Route path="/recipe/fan/:id" element={<FanRecipePage />} />
           <Route path="/recipe/all/:id" element={<AllRecipePage />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/recipe/category/:id" element={<CategoryRecipePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
