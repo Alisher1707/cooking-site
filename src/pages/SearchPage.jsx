@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import './SearchPage.css';
@@ -6,6 +6,7 @@ import './SearchPage.css';
 const SearchPage = () => {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('q') || '';
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -16,7 +17,8 @@ const SearchPage = () => {
       title: t.searchRecipe1Title,
       quote: t.searchRecipe1Quote,
       author: t.searchRecipe1Author,
-      category: t.searchRecipeCategory
+      category: t.searchRecipeCategory,
+      route: '/recipe/chicken'
     },
     {
       id: 2,
@@ -24,7 +26,8 @@ const SearchPage = () => {
       title: t.searchRecipe2Title,
       quote: t.searchRecipe2Quote,
       author: t.searchRecipe2Author,
-      category: t.searchRecipeCategory
+      category: t.searchRecipeCategory,
+      route: '/recipe/plov'
     },
     {
       id: 3,
@@ -32,7 +35,8 @@ const SearchPage = () => {
       title: t.searchRecipe3Title,
       quote: t.searchRecipe3Quote,
       author: t.searchRecipe3Author,
-      category: t.searchRecipeCategory
+      category: t.searchRecipeCategory,
+      route: '/recipe/fajitas'
     },
     {
       id: 4,
@@ -40,7 +44,8 @@ const SearchPage = () => {
       title: t.searchRecipe4Title,
       quote: t.searchRecipe4Quote,
       author: t.searchRecipe4Author,
-      category: t.searchRecipeCategory
+      category: t.searchRecipeCategory,
+      route: '/recipe/salad'
     },
     {
       id: 5,
@@ -48,9 +53,14 @@ const SearchPage = () => {
       title: t.searchRecipe5Title,
       quote: t.searchRecipe5Quote,
       author: t.searchRecipe5Author,
-      category: t.searchRecipeCategory
+      category: t.searchRecipeCategory,
+      route: '/recipe/dessert'
     }
   ];
+
+  const handleRecipeClick = (route) => {
+    navigate(route);
+  };
 
   // Filter recipes based on search query
   const filteredRecipes = recipes.filter(recipe => {
@@ -74,7 +84,7 @@ const SearchPage = () => {
           </div>
         ) : (
           filteredRecipes.map((recipe) => (
-            <div key={recipe.id} className="recipe-card">
+            <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe.route)} style={{ cursor: 'pointer' }}>
               <div className="recipe-image-wrapper">
                 <img src={recipe.image} alt={recipe.title} className="recipe-image" />
               </div>
