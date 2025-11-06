@@ -48,11 +48,25 @@ const Navbar = () => {
   };
 
   const handleSearchClick = () => {
-    navigate('/search');
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+    } else {
+      navigate('/search');
+    }
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+    } else {
+      navigate('/search');
+    }
   };
 
   const handleClearSearch = () => {
     setSearchQuery('');
+    navigate('/search');
   };
 
   return (
@@ -141,24 +155,26 @@ const Navbar = () => {
       {isSearchPage && (
         <div className="navbar-search-row">
           <div className="navbar-search-container">
-            <div className="navbar-search-box">
-              <span className="navbar-search-label">I WANT TO MAKE</span>
-              <svg className="navbar-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-              <input
-                type="text"
-                className="navbar-search-input"
-                placeholder=""
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button className="navbar-clear-button" onClick={handleClearSearch}>
-                clear ×
-              </button>
-            </div>
-            <div className="navbar-search-underline"></div>
+            <form onSubmit={handleSearchSubmit}>
+              <div className="navbar-search-box">
+                <span className="navbar-search-label">I WANT TO MAKE</span>
+                <svg className="navbar-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input
+                  type="text"
+                  className="navbar-search-input"
+                  placeholder=""
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="button" className="navbar-clear-button" onClick={handleClearSearch}>
+                  clear ×
+                </button>
+              </div>
+              <div className="navbar-search-underline"></div>
+            </form>
           </div>
         </div>
       )}
