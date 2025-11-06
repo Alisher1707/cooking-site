@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import { UzbekistanFlag, RussiaFlag, UKFlag } from './Flags';
@@ -7,10 +7,14 @@ import './Navbar.css';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const { language, changeLanguage } = useLanguage();
   const t = translations[language];
+
+  const isSearchPage = location.pathname === '/search';
 
   const languages = [
     { code: 'uz', name: "O'ZB", flag: <UzbekistanFlag /> },
@@ -43,8 +47,16 @@ const Navbar = () => {
     navigate('/profile');
   };
 
+  const handleSearchClick = () => {
+    navigate('/search');
+  };
+
+  const handleClearSearch = () => {
+    setSearchQuery('');
+  };
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isSearchPage ? 'navbar-with-search' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <a href="#home" onClick={(e) => { e.preventDefault(); handleLogoClick(); }}>Food.</a>
@@ -67,20 +79,18 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="navbar-item navbar-item-icon">
-            <button className="navbar-icon search-icon-special" aria-label={t.search || "Qidiruv"}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </li>
         </ul>
 
         <div className="navbar-icons">
           <button className="navbar-icon bookmark-icon" aria-label={t.bookmarks}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+          <button className="navbar-icon search-icon-special" aria-label={t.search || "Qidiruv"} onClick={handleSearchClick}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
             </svg>
           </button>
           <button className="navbar-icon user-icon" aria-label={t.userProfile} onClick={handleProfileClick}>
@@ -127,6 +137,31 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {isSearchPage && (
+        <div className="navbar-search-row">
+          <div className="navbar-search-container">
+            <div className="navbar-search-box">
+              <span className="navbar-search-label">I WANT TO MAKE</span>
+              <svg className="navbar-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input
+                type="text"
+                className="navbar-search-input"
+                placeholder=""
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button className="navbar-clear-button" onClick={handleClearSearch}>
+                clear ×
+              </button>
+            </div>
+            <div className="navbar-search-underline"></div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
