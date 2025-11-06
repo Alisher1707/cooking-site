@@ -1,50 +1,54 @@
 import { useSearchParams } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 import './SearchPage.css';
 
 const SearchPage = () => {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('q') || '';
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const recipes = [
     {
       id: 1,
       image: '/img/chicken.jpg',
-      title: 'JUICY GRILLED CHICKEN',
-      quote: '"This chicken recipe is perfect for family dinners. The marinade makes it so tender and flavorful. My kids love it!"',
-      author: '-chefmama',
-      category: 'RECIPE'
+      title: t.searchRecipe1Title,
+      quote: t.searchRecipe1Quote,
+      author: t.searchRecipe1Author,
+      category: t.searchRecipeCategory
     },
     {
       id: 2,
       image: '/img/osh.webp',
-      title: 'TRADITIONAL UZBEK PLOV',
-      quote: '"Authentic plov recipe passed down from my grandmother. The rice comes out perfectly fluffy and the meat is so tender. A true masterpiece!"',
-      author: '-plovmaster',
-      category: 'RECIPE'
+      title: t.searchRecipe2Title,
+      quote: t.searchRecipe2Quote,
+      author: t.searchRecipe2Author,
+      category: t.searchRecipeCategory
     },
     {
       id: 3,
       image: '/img/FAJITAS.jpg',
-      title: 'SIZZLING CHICKEN FAJITAS',
-      quote: '"These fajitas are restaurant quality! The peppers and onions give it amazing flavor. Perfect for taco Tuesday!"',
-      author: '-mexicanfoodlover',
-      category: 'RECIPE'
+      title: t.searchRecipe3Title,
+      quote: t.searchRecipe3Quote,
+      author: t.searchRecipe3Author,
+      category: t.searchRecipeCategory
     },
     {
       id: 4,
       image: '/img/salat.webp',
-      title: 'FRESH GARDEN SALAD',
-      quote: '"Light, crispy and so refreshing! Perfect side dish for any meal. The homemade dressing takes it to the next level."',
-      author: '-healthyeats',
-      category: 'RECIPE'
+      title: t.searchRecipe4Title,
+      quote: t.searchRecipe4Quote,
+      author: t.searchRecipe4Author,
+      category: t.searchRecipeCategory
     },
     {
       id: 5,
       image: '/img/MEVALI DESERT.jpg',
-      title: 'FRUITY SUMMER DESSERT',
-      quote: '"Sweet, colorful and absolutely delicious! Kids and adults both love this refreshing treat. Perfect for hot summer days!"',
-      author: '-dessertqueen',
-      category: 'RECIPE'
+      title: t.searchRecipe5Title,
+      quote: t.searchRecipe5Quote,
+      author: t.searchRecipe5Author,
+      category: t.searchRecipeCategory
     }
   ];
 
@@ -65,8 +69,8 @@ const SearchPage = () => {
       <div className="search-results-container">
         {filteredRecipes.length === 0 ? (
           <div className="no-results">
-            <h2>No recipes found for "{searchQuery}"</h2>
-            <p>Try searching for something else.</p>
+            <h2>{t.searchNoResultsFor.replace('{query}', searchQuery)}</h2>
+            <p>{t.searchTryAgain}</p>
           </div>
         ) : (
           filteredRecipes.map((recipe) => (
