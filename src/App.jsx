@@ -17,6 +17,7 @@ import FanRecipePage from './pages/FanRecipePage';
 import AllRecipePage from './pages/AllRecipePage';
 import CategoryPage from './pages/CategoryPage';
 import CategoryRecipePage from './pages/CategoryRecipePage';
+import SearchPage from './pages/SearchPage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
@@ -50,6 +51,7 @@ function App() {
           <Route path="/recipe/all/:id" element={<AllRecipePage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/recipe/category/:id" element={<CategoryRecipePage />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />

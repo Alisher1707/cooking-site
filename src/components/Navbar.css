@@ -199,15 +199,31 @@
   display: flex;
   align-items: center;
   padding: 0;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .navbar-item-icon .navbar-icon {
   padding: 0.5rem;
 }
 
-.search-icon svg {
-  stroke-width: 2.5;
+.search-icon-special {
+  background: none !important;
+  border: none !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  padding: 0.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: color 0.3s ease !important;
+}
+
+.search-icon-special:hover {
+  color: #ff6b35 !important;
+}
+
+.search-icon-special svg {
+  stroke: currentColor !important;
 }
 
 .navbar-toggle {
