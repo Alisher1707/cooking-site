@@ -194,6 +194,22 @@ export const translations = {
     searchNoResults: 'Hech qanday retsept topilmadi',
     searchNoResultsFor: '"{query}" uchun hech qanday retsept topilmadi',
     searchTryAgain: 'Boshqa narsa qidirib ko\'ring.',
+
+    // Recipe Detail Page
+    recipeDetailFrom: 'From food blog',
+    recipeDetailMadeThis: 'MEN BUNI TAYYORLADIM',
+    recipeDetailPhoto: 'PHOTO BY IZY HOSSACK',
+    recipeDetailViewAll: 'VIEW ALL',
+    recipeDetailPrepTime: 'Tayyorlanish',
+    recipeDetailServings: 'Porciyalar',
+    recipeDetailIngredients: 'Tarkibi',
+    recipeDetailIngredientsTitle: 'TARKIBI',
+    recipeDetailStepsTitle: 'TAYYORLASH BOSQICHLARI',
+    recipeDetailNutritionTitle: 'OZUQAVIY QIYMATI (1 PORCIYA)',
+    recipeDetailCalories: 'Kaloriya',
+    recipeDetailProtein: 'Oqsil',
+    recipeDetailCarbs: 'Uglevodlar',
+    recipeDetailFat: 'Yog\'',
   },
 
   ru: {
@@ -391,6 +407,22 @@ export const translations = {
     searchNoResults: 'Рецепты не найдены',
     searchNoResultsFor: 'Рецептов по запросу "{query}" не найдено',
     searchTryAgain: 'Попробуйте поискать что-то другое.',
+
+    // Recipe Detail Page
+    recipeDetailFrom: 'Из блога о еде',
+    recipeDetailMadeThis: 'Я ПРИГОТОВИЛ ЭТО',
+    recipeDetailPhoto: 'ФОТО: IZY HOSSACK',
+    recipeDetailViewAll: 'СМОТРЕТЬ ВСЕ',
+    recipeDetailPrepTime: 'Подготовка',
+    recipeDetailServings: 'Порции',
+    recipeDetailIngredients: 'Ингредиенты',
+    recipeDetailIngredientsTitle: 'ИНГРЕДИЕНТЫ',
+    recipeDetailStepsTitle: 'ЭТАПЫ ПРИГОТОВЛЕНИЯ',
+    recipeDetailNutritionTitle: 'ПИЩЕВАЯ ЦЕННОСТЬ (1 ПОРЦИЯ)',
+    recipeDetailCalories: 'Калории',
+    recipeDetailProtein: 'Белок',
+    recipeDetailCarbs: 'Углеводы',
+    recipeDetailFat: 'Жиры',
   },
 
   en: {
@@ -588,5 +620,21 @@ export const translations = {
     searchNoResults: 'No recipes found',
     searchNoResultsFor: 'No recipes found for "{query}"',
     searchTryAgain: 'Try searching for something else.',
+
+    // Recipe Detail Page
+    recipeDetailFrom: 'From food blog',
+    recipeDetailMadeThis: 'I MADE THIS',
+    recipeDetailPhoto: 'PHOTO BY IZY HOSSACK',
+    recipeDetailViewAll: 'VIEW ALL',
+    recipeDetailPrepTime: 'Prep time',
+    recipeDetailServings: 'Servings',
+    recipeDetailIngredients: 'Ingredients',
+    recipeDetailIngredientsTitle: 'INGREDIENTS',
+    recipeDetailStepsTitle: 'PREPARATION STEPS',
+    recipeDetailNutritionTitle: 'NUTRITION (1 SERVING)',
+    recipeDetailCalories: 'Calories',
+    recipeDetailProtein: 'Protein',
+    recipeDetailCarbs: 'Carbs',
+    recipeDetailFat: 'Fat',
   }
 };
