@@ -9,41 +9,41 @@ const SearchPage = () => {
     {
       id: 1,
       image: '/img/chicken.jpg',
-      title: 'QUICK & EASY CHICKEN ENCHILADAS',
-      quote: '"I made these using up some sliced cheese from my fridge. My family loved the chicken with the green sauce. I will make again. It\'s easy, cheap and great."',
-      author: '-mommyoffour',
+      title: 'JUICY GRILLED CHICKEN',
+      quote: '"This chicken recipe is perfect for family dinners. The marinade makes it so tender and flavorful. My kids love it!"',
+      author: '-chefmama',
       category: 'RECIPE'
     },
     {
       id: 2,
       image: '/img/osh.webp',
-      title: '30-MINUTE CHICKEN AND DUMPLINGS',
-      quote: '"I have made this recipe several times and it always turns out delicious!"',
-      author: '-hungrybri',
+      title: 'TRADITIONAL UZBEK PLOV',
+      quote: '"Authentic plov recipe passed down from my grandmother. The rice comes out perfectly fluffy and the meat is so tender. A true masterpiece!"',
+      author: '-plovmaster',
       category: 'RECIPE'
     },
     {
       id: 3,
       image: '/img/FAJITAS.jpg',
-      title: 'CREAMY GARLIC PASTA',
-      quote: '"This pasta is absolutely amazing! So creamy and full of flavor."',
-      author: '-chefmike',
+      title: 'SIZZLING CHICKEN FAJITAS',
+      quote: '"These fajitas are restaurant quality! The peppers and onions give it amazing flavor. Perfect for taco Tuesday!"',
+      author: '-mexicanfoodlover',
       category: 'RECIPE'
     },
     {
       id: 4,
       image: '/img/salat.webp',
-      title: 'FRESH SUMMER SALAD',
-      quote: '"Perfect for hot summer days. Light, refreshing and healthy!"',
-      author: '-healthyfoodie',
+      title: 'FRESH GARDEN SALAD',
+      quote: '"Light, crispy and so refreshing! Perfect side dish for any meal. The homemade dressing takes it to the next level."',
+      author: '-healthyeats',
       category: 'RECIPE'
     },
     {
       id: 5,
       image: '/img/MEVALI DESERT.jpg',
-      title: 'HOMEMADE TOMATO SOUP',
-      quote: '"Better than any canned soup. My kids ask for this every week!"',
-      author: '-souperlady',
+      title: 'FRUITY SUMMER DESSERT',
+      quote: '"Sweet, colorful and absolutely delicious! Kids and adults both love this refreshing treat. Perfect for hot summer days!"',
+      author: '-dessertqueen',
       category: 'RECIPE'
     }
   ];
