@@ -195,6 +195,21 @@
   color: #ff6b35;
 }
 
+.navbar-item-icon {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.navbar-item-icon .navbar-icon {
+  padding: 0.5rem;
+}
+
+.search-icon svg {
+  stroke-width: 2.5;
+}
+
 .navbar-toggle {
   display: none;
   flex-direction: column;

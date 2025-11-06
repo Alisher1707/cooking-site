@@ -67,15 +67,17 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li className="navbar-item navbar-item-icon">
+            <button className="navbar-icon search-icon" aria-label={t.search || "Qidiruv"}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </li>
         </ul>
 
         <div className="navbar-icons">
-          <button className="navbar-icon search-icon" aria-label={t.search}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
-            </svg>
-          </button>
           <button className="navbar-icon bookmark-icon" aria-label={t.bookmarks}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
