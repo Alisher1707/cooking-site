@@ -56,7 +56,7 @@ const CategoryPage = () => {
 
         {recipes.length === 0 && (
           <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-            <h2 style={{ color: '#666' }}>Bu kategoriyada hozircha retseptlar yo'q</h2>
+            <h2 style={{ color: '#666' }}>{t.categoryNoRecipes}</h2>
           </div>
         )}
       </div>

@@ -1,0 +1,133 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.not-found-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.not-found-content {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.not-found-title {
+  font-size: 120px;
+  font-weight: 900;
+  color: #FF6B6B;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.not-found-subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 20px 0 10px;
+}
+
+.not-found-description {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 40px;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.not-found-button {
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.not-found-button.primary {
+  background: #FF6B6B;
+  color: white;
+}
+
+.not-found-button.primary:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.not-found-button.secondary {
+  background: #667eea;
+  color: white;
+}
+
+.not-found-button.secondary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.not-found-illustration {
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.not-found-illustration svg {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found-content {
+    padding: 40px 20px;
+  }
+
+  .not-found-title {
+    font-size: 80px;
+  }
+
+  .not-found-subtitle {
+    font-size: 24px;
+  }
+
+  .not-found-description {
+    font-size: 14px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .not-found-button {
+    width: 100%;
+  }
+
+  .not-found-illustration svg {
+    width: 150px;
+    height: 150px;
+  }
+}

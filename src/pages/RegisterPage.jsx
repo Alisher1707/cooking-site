@@ -28,23 +28,33 @@ const RegisterPage = () => {
     });
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage({ type: '', text: '' });
 
     // Validation
     if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
-      setMessage({ type: 'error', text: 'Barcha maydonlarni to\'ldiring!' });
+      setMessage({ type: 'error', text: t.registerFillAllFields });
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      setMessage({ type: 'error', text: t.registerInvalidEmail || 'Email noto\'g\'ri formatda!' });
       return;
     }
 
     if (formData.password.length < 6) {
-      setMessage({ type: 'error', text: 'Parol kamida 6 ta belgidan iborat bo\'lishi kerak!' });
+      setMessage({ type: 'error', text: t.registerPasswordLength });
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-      setMessage({ type: 'error', text: 'Parollar mos kelmaydi!' });
+      setMessage({ type: 'error', text: t.registerPasswordMismatch });
       return;
     }
 
@@ -55,12 +65,12 @@ const RegisterPage = () => {
     });
 
     if (result.success) {
-      setMessage({ type: 'success', text: result.message });
+      setMessage({ type: 'success', text: t.registerSuccess });
       setTimeout(() => {
         navigate('/login');
       }, 1500);
     } else {
-      setMessage({ type: 'error', text: result.message });
+      setMessage({ type: 'error', text: t.registerEmailExists });
     }
   };
 
@@ -68,8 +78,8 @@ const RegisterPage = () => {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-card">
-          <h1 className="auth-title">Ro'yxatdan o'tish</h1>
-          <p className="auth-subtitle">Yangi hisob yarating</p>
+          <h1 className="auth-title">{t.registerTitle}</h1>
+          <p className="auth-subtitle">{t.registerSubtitle}</p>
 
           {message.text && (
             <div className={`auth-message ${message.type}`}>
@@ -79,33 +89,33 @@ const RegisterPage = () => {
 
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
-              <label htmlFor="name">Ism</label>
+              <label htmlFor="name">{t.registerName}</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Ismingiz"
+                placeholder={t.registerNamePlaceholder}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t.registerEmail}</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="email@example.com"
+                placeholder={t.registerEmailPlaceholder}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Parol</label>
+              <label htmlFor="password">{t.registerPassword}</label>
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -113,14 +123,14 @@ const RegisterPage = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  placeholder="••••••••"
+                  placeholder={t.registerPasswordPlaceholder}
                   required
                 />
                 <button
                   type="button"
                   className="password-toggle"
                   onClick={() => setShowPassword(!showPassword)}
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={showPassword ? t.hidePasswordLabel : t.showPasswordLabel}
                 >
                   {showPassword ? (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -138,7 +148,7 @@ const RegisterPage = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="confirmPassword">Parolni tasdiqlang</label>
+              <label htmlFor="confirmPassword">{t.registerConfirmPassword}</label>
               <div className="password-input-wrapper">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -146,14 +156,14 @@ const RegisterPage = () => {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  placeholder="••••••••"
+                  placeholder={t.registerPasswordPlaceholder}
                   required
                 />
                 <button
                   type="button"
                   className="password-toggle"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  aria-label={showConfirmPassword ? "Hide password" : "Show password"}
+                  aria-label={showConfirmPassword ? t.hidePasswordLabel : t.showPasswordLabel}
                 >
                   {showConfirmPassword ? (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -171,12 +181,12 @@ const RegisterPage = () => {
             </div>
 
             <button type="submit" className="auth-button">
-              Ro'yxatdan o'tish
+              {t.registerButton}
             </button>
           </form>
 
           <p className="auth-footer">
-            Hisobingiz bormi? <Link to="/login">Kirish</Link>
+            {t.registerHaveAccount} <Link to="/login">{t.registerLogin}</Link>
           </p>
         </div>
       </div>

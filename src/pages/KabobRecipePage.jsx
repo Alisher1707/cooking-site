@@ -2,15 +2,18 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
+import { useSavedRecipes } from '../context/SavedRecipesContext';
+import { translations } from '../translations/translations';
 import './RecipeDetailPage.css';
 
 const KabobRecipePage = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
+  const t = translations[language];
   const { user } = useAuth();
+  const { toggleSaveRecipe, isRecipeSaved } = useSavedRecipes();
 
   const [servings, setServings] = useState(4);
-  const [isSaved, setIsSaved] = useState(false);
 
   // Recipe data
   const recipe = {
@@ -86,9 +89,10 @@ const KabobRecipePage = () => {
   };
 
   const handleSave = () => {
-    setIsSaved(!isSaved);
-    // Add to saved recipes in localStorage
+    toggleSaveRecipe(recipe.id);
   };
+
+  const isSaved = isRecipeSaved(recipe.id);
 
   const handleShare = () => {
     if (navigator.share) {
@@ -161,14 +165,14 @@ const KabobRecipePage = () => {
               <circle cx="12" cy="12" r="10"></circle>
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            MEN BUNI TAYYORLADIM
+            {t.recipeDetailMadeThisButton}
           </button>
         </div>
 
         {/* Main image */}
         <div className="recipe-main-image">
           <img src={recipe.mainImage} alt={recipe.title} />
-          <div className="image-credit">PHOTO BY IZY HOSSACK 😊</div>
+          <div className="image-credit">{t.recipeDetailPhotoBy} IZY HOSSACK</div>
         </div>
 
         {/* Additional images */}
@@ -179,7 +183,7 @@ const KabobRecipePage = () => {
             </div>
           ))}
           <div className="recipe-image-thumb view-all">
-            <span>VIEW ALL</span>
+            <span>{t.recipeDetailViewAllPhotos}</span>
           </div>
         </div>
 
@@ -190,13 +194,13 @@ const KabobRecipePage = () => {
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span>Tayyorlanish: <strong>{recipe.prepTime}</strong></span>
+            <span>{t.recipeDetailPrepTimeLabel}: <strong>{recipe.prepTime}</strong></span>
           </div>
           <div className="info-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
             </svg>
-            <span>Porciyalar:
+            <span>{t.recipeDetailServingsLabel}:
               <div className="servings-control">
                 <button onClick={() => setServings(Math.max(1, servings - 1))}>−</button>
                 <strong>{servings}</strong>
@@ -214,7 +218,7 @@ const KabobRecipePage = () => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M20 7h-9M14 17H5M17 3v18M10 7v4M7 7v10"></path>
               </svg>
-              Tarkibi: {recipe.ingredients.length}
+              {t.recipeDetailIngredientsLabel}: {recipe.ingredients.length}
             </h2>
             <ul className="ingredients-list">
               {recipe.ingredients.map((ingredient, index) => (
@@ -230,7 +234,7 @@ const KabobRecipePage = () => {
 
           {/* Cooking steps */}
           <div className="recipe-section">
-            <h2 className="section-title">Tayyorlash bosqichlari</h2>
+            <h2 className="section-title">{t.recipeDetailStepsLabel}</h2>
             <div className="steps-list">
               {recipe.steps.map((step, index) => (
                 <div key={index} className="step-item">
@@ -247,22 +251,22 @@ const KabobRecipePage = () => {
 
         {/* Nutrition info */}
         <div className="recipe-section nutrition-section">
-          <h2 className="section-title">Ozuqaviy qiymati (1 porciya)</h2>
+          <h2 className="section-title">{t.recipeDetailNutritionLabel}</h2>
           <div className="nutrition-grid">
             <div className="nutrition-item">
-              <span className="nutrition-label">Kaloriya</span>
+              <span className="nutrition-label">{t.recipeDetailCaloriesLabel}</span>
               <span className="nutrition-value">{recipe.nutrition.calories}</span>
             </div>
             <div className="nutrition-item">
-              <span className="nutrition-label">Oqsil</span>
+              <span className="nutrition-label">{t.recipeDetailProteinLabel}</span>
               <span className="nutrition-value">{recipe.nutrition.protein}</span>
             </div>
             <div className="nutrition-item">
-              <span className="nutrition-label">Uglevodlar</span>
+              <span className="nutrition-label">{t.recipeDetailCarbsLabel}</span>
               <span className="nutrition-value">{recipe.nutrition.carbs}</span>
             </div>
             <div className="nutrition-item">
-              <span className="nutrition-label">Yog'</span>
+              <span className="nutrition-label">{t.recipeDetailFatLabel}</span>
               <span className="nutrition-value">{recipe.nutrition.fat}</span>
             </div>
           </div>

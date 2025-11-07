@@ -60,13 +60,13 @@ const EditProfilePage = () => {
     if (file) {
       // Check file size (max 5MB)
       if (file.size > 5 * 1024 * 1024) {
-        setMessage({ type: 'error', text: 'Rasm hajmi 5MB dan oshmasligi kerak!' });
+        setMessage({ type: 'error', text: t.editProfileImageSizeError });
         return;
       }
 
       // Check file type
       if (!file.type.startsWith('image/')) {
-        setMessage({ type: 'error', text: 'Faqat rasm fayllari yuklanadi!' });
+        setMessage({ type: 'error', text: t.editProfileImageTypeError });
         return;
       }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
@@ -9,12 +9,21 @@ const SettingsPage = () => {
   const { language, changeLanguage } = useLanguage();
   const t = translations[language];
 
-  const [settings, setSettings] = useState({
-    notifications: true,
-    emailUpdates: true,
-    privateProfile: false,
-    showEmail: false
+  const [settings, setSettings] = useState(() => {
+    // Load settings from localStorage on initial render
+    const savedSettings = localStorage.getItem('userSettings');
+    return savedSettings ? JSON.parse(savedSettings) : {
+      notifications: true,
+      emailUpdates: true,
+      privateProfile: false,
+      showEmail: false
+    };
   });
+
+  // Save settings to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('userSettings', JSON.stringify(settings));
+  }, [settings]);
 
   const handleToggle = (setting) => {
     setSettings(prev => ({

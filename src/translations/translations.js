@@ -210,6 +210,73 @@ export const translations = {
     recipeDetailProtein: 'Oqsil',
     recipeDetailCarbs: 'Uglevodlar',
     recipeDetailFat: 'Yog\'',
+
+    // Login Page
+    loginTitle: 'Kirish',
+    loginSubtitle: 'Hisobingizga kiring',
+    loginEmail: 'Email',
+    loginPassword: 'Parol',
+    loginButton: 'Kirish',
+    loginNoAccount: 'Hisobingiz yo\'qmi?',
+    loginRegister: 'Ro\'yxatdan o\'tish',
+    loginFillAllFields: 'Barcha maydonlarni to\'ldiring!',
+    loginSuccess: 'Muvaffaqiyatli kirdingiz!',
+    loginError: 'Email yoki parol noto\'g\'ri!',
+
+    // Register Page
+    registerTitle: 'Ro\'yxatdan o\'tish',
+    registerSubtitle: 'Yangi hisob yarating',
+    registerName: 'Ism',
+    registerEmail: 'Email',
+    registerPassword: 'Parol',
+    registerConfirmPassword: 'Parolni tasdiqlang',
+    registerButton: 'Ro\'yxatdan o\'tish',
+    registerHaveAccount: 'Hisobingiz bormi?',
+    registerLogin: 'Kirish',
+    registerFillAllFields: 'Barcha maydonlarni to\'ldiring!',
+    registerPasswordLength: 'Parol kamida 6 ta belgidan iborat bo\'lishi kerak!',
+    registerPasswordMismatch: 'Parollar mos kelmaydi!',
+    registerSuccess: 'Muvaffaqiyatli ro\'yxatdan o\'tdingiz!',
+    registerEmailExists: 'Bu email allaqachon ro\'yxatdan o\'tgan!',
+    registerInvalidEmail: 'Email noto\'g\'ri formatda!',
+    registerNamePlaceholder: 'Ismingiz',
+    registerEmailPlaceholder: 'email@example.com',
+    registerPasswordPlaceholder: '••••••••',
+
+    // Category Page
+    categoryNoRecipes: 'Bu kategoriyada hozircha retseptlar yo\'q',
+
+    // Edit Profile Page errors
+    editProfileImageSizeError: 'Rasm hajmi 5MB dan oshmasligi kerak!',
+    editProfileImageTypeError: 'Faqat rasm fayllari yuklanadi!',
+
+    // Password visibility
+    showPasswordLabel: 'Parolni ko\'rsatish',
+    hidePasswordLabel: 'Parolni yashirish',
+
+    // Navbar Search
+    searchBoxLabel: 'MEN TAYYORLAMOQCHIMAN',
+    searchClearButton: 'tozalash ×',
+
+    // Recipe Detail Common
+    recipeDetailMadeThisButton: 'MEN BUNI TAYYORLADIM',
+    recipeDetailPhotoBy: 'FOTOGRAF',
+    recipeDetailViewAllPhotos: 'BARCHA RASMLAR',
+    recipeDetailPrepTimeLabel: 'Tayyorlanish',
+    recipeDetailServingsLabel: 'Porciyalar',
+    recipeDetailIngredientsLabel: 'Tarkibi',
+    recipeDetailStepsLabel: 'TAYYORLASH BOSQICHLARI',
+    recipeDetailNutritionLabel: 'OZUQAVIY QIYMATI (1 PORCIYA)',
+    recipeDetailCaloriesLabel: 'Kaloriya',
+    recipeDetailProteinLabel: 'Oqsil',
+    recipeDetailCarbsLabel: 'Uglevodlar',
+    recipeDetailFatLabel: 'Yog\'',
+
+    // 404 Not Found Page
+    notFoundTitle: 'Sahifa topilmadi',
+    notFoundDescription: 'Siz qidirayotgan sahifa mavjud emas yoki ko\'chirilgan.',
+    notFoundHomeButton: 'Bosh sahifaga qaytish',
+    notFoundRecipesButton: 'Retseptlarni ko\'rish',
   },
 
   ru: {
@@ -423,6 +490,73 @@ export const translations = {
     recipeDetailProtein: 'Белок',
     recipeDetailCarbs: 'Углеводы',
     recipeDetailFat: 'Жиры',
+
+    // Login Page
+    loginTitle: 'Вход',
+    loginSubtitle: 'Войдите в свой аккаунт',
+    loginEmail: 'Email',
+    loginPassword: 'Пароль',
+    loginButton: 'Войти',
+    loginNoAccount: 'Нет аккаунта?',
+    loginRegister: 'Зарегистрироваться',
+    loginFillAllFields: 'Заполните все поля!',
+    loginSuccess: 'Вы успешно вошли!',
+    loginError: 'Неверный email или пароль!',
+
+    // Register Page
+    registerTitle: 'Регистрация',
+    registerSubtitle: 'Создайте новый аккаунт',
+    registerName: 'Имя',
+    registerEmail: 'Email',
+    registerPassword: 'Пароль',
+    registerConfirmPassword: 'Подтвердите пароль',
+    registerButton: 'Зарегистрироваться',
+    registerHaveAccount: 'Уже есть аккаунт?',
+    registerLogin: 'Войти',
+    registerFillAllFields: 'Заполните все поля!',
+    registerPasswordLength: 'Пароль должен содержать минимум 6 символов!',
+    registerPasswordMismatch: 'Пароли не совпадают!',
+    registerSuccess: 'Вы успешно зарегистрировались!',
+    registerEmailExists: 'Этот email уже зарегистрирован!',
+    registerInvalidEmail: 'Email неверного формата!',
+    registerNamePlaceholder: 'Ваше имя',
+    registerEmailPlaceholder: 'email@example.com',
+    registerPasswordPlaceholder: '••••••••',
+
+    // Category Page
+    categoryNoRecipes: 'В этой категории пока нет рецептов',
+
+    // Edit Profile Page errors
+    editProfileImageSizeError: 'Размер изображения не должен превышать 5 МБ!',
+    editProfileImageTypeError: 'Загружаются только файлы изображений!',
+
+    // Password visibility
+    showPasswordLabel: 'Показать пароль',
+    hidePasswordLabel: 'Скрыть пароль',
+
+    // Navbar Search
+    searchBoxLabel: 'Я ХОЧУ ПРИГОТОВИТЬ',
+    searchClearButton: 'очистить ×',
+
+    // Recipe Detail Common
+    recipeDetailMadeThisButton: 'Я ПРИГОТОВИЛ ЭТО',
+    recipeDetailPhotoBy: 'ФОТОГРАФ',
+    recipeDetailViewAllPhotos: 'ВСЕ ФОТО',
+    recipeDetailPrepTimeLabel: 'Подготовка',
+    recipeDetailServingsLabel: 'Порции',
+    recipeDetailIngredientsLabel: 'Ингредиенты',
+    recipeDetailStepsLabel: 'ЭТАПЫ ПРИГОТОВЛЕНИЯ',
+    recipeDetailNutritionLabel: 'ПИЩЕВАЯ ЦЕННОСТЬ (1 ПОРЦИЯ)',
+    recipeDetailCaloriesLabel: 'Калории',
+    recipeDetailProteinLabel: 'Белок',
+    recipeDetailCarbsLabel: 'Углеводы',
+    recipeDetailFatLabel: 'Жиры',
+
+    // 404 Not Found Page
+    notFoundTitle: 'Страница не найдена',
+    notFoundDescription: 'Страница, которую вы ищете, не существует или была перемещена.',
+    notFoundHomeButton: 'Вернуться на главную',
+    notFoundRecipesButton: 'Посмотреть рецепты',
   },
 
   en: {
@@ -636,5 +770,72 @@ export const translations = {
     recipeDetailProtein: 'Protein',
     recipeDetailCarbs: 'Carbs',
     recipeDetailFat: 'Fat',
+
+    // Login Page
+    loginTitle: 'Login',
+    loginSubtitle: 'Sign in to your account',
+    loginEmail: 'Email',
+    loginPassword: 'Password',
+    loginButton: 'Login',
+    loginNoAccount: 'Don\'t have an account?',
+    loginRegister: 'Sign up',
+    loginFillAllFields: 'Please fill in all fields!',
+    loginSuccess: 'Successfully logged in!',
+    loginError: 'Invalid email or password!',
+
+    // Register Page
+    registerTitle: 'Register',
+    registerSubtitle: 'Create a new account',
+    registerName: 'Name',
+    registerEmail: 'Email',
+    registerPassword: 'Password',
+    registerConfirmPassword: 'Confirm Password',
+    registerButton: 'Register',
+    registerHaveAccount: 'Already have an account?',
+    registerLogin: 'Login',
+    registerFillAllFields: 'Please fill in all fields!',
+    registerPasswordLength: 'Password must be at least 6 characters long!',
+    registerPasswordMismatch: 'Passwords do not match!',
+    registerSuccess: 'Successfully registered!',
+    registerEmailExists: 'This email is already registered!',
+    registerInvalidEmail: 'Invalid email format!',
+    registerNamePlaceholder: 'Your name',
+    registerEmailPlaceholder: 'email@example.com',
+    registerPasswordPlaceholder: '••••••••',
+
+    // Category Page
+    categoryNoRecipes: 'No recipes in this category yet',
+
+    // Edit Profile Page errors
+    editProfileImageSizeError: 'Image size must not exceed 5MB!',
+    editProfileImageTypeError: 'Only image files can be uploaded!',
+
+    // Password visibility
+    showPasswordLabel: 'Show password',
+    hidePasswordLabel: 'Hide password',
+
+    // Navbar Search
+    searchBoxLabel: 'I WANT TO MAKE',
+    searchClearButton: 'clear ×',
+
+    // Recipe Detail Common
+    recipeDetailMadeThisButton: 'I MADE THIS',
+    recipeDetailPhotoBy: 'PHOTO BY',
+    recipeDetailViewAllPhotos: 'VIEW ALL',
+    recipeDetailPrepTimeLabel: 'Prep time',
+    recipeDetailServingsLabel: 'Servings',
+    recipeDetailIngredientsLabel: 'Ingredients',
+    recipeDetailStepsLabel: 'PREPARATION STEPS',
+    recipeDetailNutritionLabel: 'NUTRITION (1 SERVING)',
+    recipeDetailCaloriesLabel: 'Calories',
+    recipeDetailProteinLabel: 'Protein',
+    recipeDetailCarbsLabel: 'Carbs',
+    recipeDetailFatLabel: 'Fat',
+
+    // 404 Not Found Page
+    notFoundTitle: 'Page Not Found',
+    notFoundDescription: 'The page you are looking for does not exist or has been moved.',
+    notFoundHomeButton: 'Back to Home',
+    notFoundRecipesButton: 'View Recipes',
   }
 };

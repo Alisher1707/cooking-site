@@ -30,19 +30,19 @@ const LoginPage = () => {
     setMessage({ type: '', text: '' });
 
     if (!formData.email || !formData.password) {
-      setMessage({ type: 'error', text: 'Barcha maydonlarni to\'ldiring!' });
+      setMessage({ type: 'error', text: t.loginFillAllFields });
       return;
     }
 
     const result = login(formData.email, formData.password);
 
     if (result.success) {
-      setMessage({ type: 'success', text: result.message });
+      setMessage({ type: 'success', text: t.loginSuccess });
       setTimeout(() => {
         navigate('/profile');
       }, 1000);
     } else {
-      setMessage({ type: 'error', text: result.message });
+      setMessage({ type: 'error', text: t.loginError });
     }
   };
 
@@ -50,8 +50,8 @@ const LoginPage = () => {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-card">
-          <h1 className="auth-title">Kirish</h1>
-          <p className="auth-subtitle">Hisobingizga kiring</p>
+          <h1 className="auth-title">{t.loginTitle}</h1>
+          <p className="auth-subtitle">{t.loginSubtitle}</p>
 
           {message.text && (
             <div className={`auth-message ${message.type}`}>
@@ -61,20 +61,20 @@ const LoginPage = () => {
 
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t.loginEmail}</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="email@example.com"
+                placeholder={t.registerEmailPlaceholder}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Parol</label>
+              <label htmlFor="password">{t.loginPassword}</label>
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -82,14 +82,14 @@ const LoginPage = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  placeholder="••••••••"
+                  placeholder={t.registerPasswordPlaceholder}
                   required
                 />
                 <button
                   type="button"
                   className="password-toggle"
                   onClick={() => setShowPassword(!showPassword)}
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={showPassword ? t.hidePasswordLabel : t.showPasswordLabel}
                 >
                   {showPassword ? (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -107,12 +107,12 @@ const LoginPage = () => {
             </div>
 
             <button type="submit" className="auth-button">
-              Kirish
+              {t.loginButton}
             </button>
           </form>
 
           <p className="auth-footer">
-            Hisobingiz yo'qmi? <Link to="/register">Ro'yxatdan o'tish</Link>
+            {t.loginNoAccount} <Link to="/register">{t.loginRegister}</Link>
           </p>
         </div>
       </div>

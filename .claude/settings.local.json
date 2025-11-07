@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(del \"src\\pages\\RecipePage.jsx\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
