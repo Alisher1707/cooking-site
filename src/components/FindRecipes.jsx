@@ -64,15 +64,8 @@ const FindRecipes = () => {
         <h2 className="find-recipes-heading">{t.findRecipesHeading}</h2>
 
         <form className="search-form" onSubmit={handleSearch}>
-          <div
-            className="search-input-wrapper"
-            style={{
-              border: '3px solid #ff8c61',
-              boxShadow: '0 3px 10px rgba(255, 140, 97, 0.25)',
-              borderRadius: '60px'
-            }}
-          >
-            <svg className="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <div className="search-input-wrapper">
+            <svg className="search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <path d="m21 21-4.35-4.35"></path>
             </svg>

@@ -9,7 +9,6 @@ import MoreIdeas from './components/MoreIdeas';
 import FeaturedRecipe from './components/FeaturedRecipe';
 import FanFavorites from './components/FanFavorites';
 import FeaturedRecipe2 from './components/FeaturedRecipe2';
-import FindRecipes from './components/FindRecipes';
 import Footer from './components/Footer';
 import RecipesPage from './pages/RecipesPage';
 import RecipeDetailPage from './pages/RecipeDetailPage';
@@ -45,7 +44,6 @@ function App() {
                 <FeaturedRecipe />
                 <FanFavorites />
                 <FeaturedRecipe2 />
-                <FindRecipes />
               </>
             } />
             <Route path="/recipes" element={<RecipesPage />} />
